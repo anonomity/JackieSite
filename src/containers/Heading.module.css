@@ -1,10 +1,28 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Ubunut&display=swap');
 .container {
   text-align: center;
-  background-color: lightgrey;
+  background-color: #fff;
   min-height: 15vh;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  justify-content: space-around;
 }
+.Location{
+  color: #ccc;
+  align-self: center;
+  font-size: 15px;
+}
+.Bold{
+  color: darkgrey
+}
+.Title{
+  font-size: 30px;
+  color: #ccc;
+  align-self: center;
+  font-family: 'Ubuntu', cursive;
+}
+.Ham {
+    width: 8%;
+    height: auto; 
+    cursor: pointer;
+  }
