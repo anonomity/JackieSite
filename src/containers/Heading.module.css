@@ -20,9 +20,17 @@
   color: #ccc;
   align-self: center;
   font-family: 'Ubuntu', cursive;
+  
+}
+
+
+.Titlebox{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 .Ham {
-    width: 8%;
+    width: 50px;
     height: auto; 
     cursor: pointer;
   }
