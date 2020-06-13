@@ -11,6 +11,7 @@
   color: #ccc;
   align-self: center;
   font-size: 15px;
+  align-self: flex-end;
 }
 .Bold{
   color: darkgrey
@@ -23,14 +24,26 @@
   
 }
 
-
+.HeadingSub{
+  font-size: 20px;
+  color: lightslategrey;
+  
+}
 .Titlebox{
   display: flex;
   flex-direction: column;
   justify-content: center;
+  
+}
+.OuterTitleBox {
+  align-self: flex-end;
+}
+.HamContainer {
+align-self: center;
 }
 .Ham {
     width: 50px;
     height: auto; 
     cursor: pointer;
+  
   }

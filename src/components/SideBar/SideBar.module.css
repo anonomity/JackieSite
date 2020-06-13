@@ -1,0 +1,10 @@
+.SideBar {
+    position: absolute;
+    top:10%;
+    left: 85%;
+    width: 150px;
+    -webkit-box-shadow: 8px 8px 18px -3px rgba(125,123,115,1);
+    -moz-box-shadow: 8px 8px 18px -3px rgba(125,123,115,1);
+    box-shadow: 8px 8px 18px -3px rgba(125,123,115,1);
+    background-color: #fff;
+}
