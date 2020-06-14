@@ -2,6 +2,7 @@ import React, { Component } from "react"
 import classes from "./Heading.module.css";
 import icon from "../assets/hbgr.svg";
 import SideBar from "../components/SideBar/SideBar";
+import {NavLink} from "react-router-dom";
 class Heading extends Component {
     state = {
         sidebar: false
@@ -27,6 +28,14 @@ class Heading extends Component {
                 <div className={classes.HamContainer}>
                     <img src={icon} className={classes.Ham} alt="drop down menu icon"  onClick={this.unMountSideBar}/>
                    {this.state.sidebar ? <SideBar /> : null} 
+                   
+
+                </div>
+                <div className={classes.NavCon}>
+                    <NavLink to="/projects" className={classes.Nav}>Projects</NavLink>
+                    <NavLink to="/courses" className={classes.Nav}>Courses</NavLink>
+                    <NavLink to="/blog" className={classes.Nav}>Blog</NavLink>
+                    <NavLink to="/students" className={classes.Nav}>Students</NavLink>
 
                 </div>
             </div>

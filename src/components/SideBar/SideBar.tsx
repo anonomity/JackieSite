@@ -1,13 +1,14 @@
-import React, {Component} from "react";
+import React, { Component } from "react";
 import classes from "./SideBar.module.css";
-
+import { NavLink } from "react-router-dom"
 class SideBar extends Component {
-    render(){
-        return(
+    render() {
+        return (
             <div className={classes.SideBar}>
-                <p>Blog</p>
-                <p>Students</p>
-                <p>Projects</p>
+                <NavLink to="/blog" className={classes.SideItems}>Blog</NavLink>
+                <NavLink to="/students" className={classes.SideItems}>Students</NavLink>
+                <NavLink to="/projects" className={classes.SideItems}>Projects</NavLink>
+                <NavLink to="/courses" className={classes.SideItems}>Courses</NavLink>
             </div>
         )
     }
