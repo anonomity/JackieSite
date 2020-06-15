@@ -1,3 +1,79 @@
 .App {
     text-align: center;
 }
+.Red{
+    background: #fff;
+    width: 100px;
+    height: 100px;
+    margin: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: solid 2px lightslategrey;
+}
+.Red:hover {
+    background: #bfd8d1;
+}
+.letters{
+    font-size: 40px;
+    color: #fff;
+    -webkit-text-stroke: 2px darkgrey ;
+    text-align:center;
+}
+
+.space{
+    background: #ccc;
+    width: 100px;
+    height: 100px;
+    margin: 5px;
+}
+.Input,
+Input:active {
+    margin: 50px auto;
+    display: block;
+    width: 200px;
+    border: none;
+    border-bottom: 2px solid lightslategray;
+    text-align: center;
+    color: darkgrey;
+}
+.Input:focus {
+    outline: none;
+
+}
+.Input:focus::placeholder{
+    color: transparent
+}
+.btn{
+    text-transform: uppercase;
+    text-decoration: none;
+    border: solid 2px lightslategray;
+    padding: 15px 40px;
+    background-color: #fff;
+    color: #777;
+    border-radius: 100px;
+    transition: all 0.2s;
+}
+.btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+
+}
+.btn:active,
+.btn:focus {
+    transform: translateY(-1px);
+    outline: none;
+
+    box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+}
+.btnbox{
+    display: flex;
+    justify-content: space-evenly;
+}
+.Matrix{
+    text-align: center;
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 100px;
+}

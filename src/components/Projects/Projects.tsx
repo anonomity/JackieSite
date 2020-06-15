@@ -9,11 +9,11 @@ class Projects extends PureComponent {
         return (
             <div className={classes.ProjectApp}>
                 <ProjectComp img={enigma} alt="crypto project" link="/projects/crypto" title="Ceasar Crypto Cipher"/>
-                <ProjectComp img={image} alt="crypto project" link="/projects/crypto"  title="Ceasar Crypto Cipher"/>
-                <ProjectComp img={image} alt="crypto project" link="/projects/crypto"  title="Ceasar Crypto Cipher"/>
-                <ProjectComp img={image} alt="crypto project" link="/projects/crypto"  title="Ceasar Crypto Cipher"/>
-                <ProjectComp img={image} alt="crypto project" link="/projects/crypto"  title="Ceasar Crypto Cipher"/>
-                <ProjectComp img={image} alt="crypto project" link="/projects/crypto"  title="Ceasar Crypto Cipher"/>
+                <ProjectComp img={image} alt="crypto project" link="/projects/crypto"  title=""/>
+                <ProjectComp img={image} alt="crypto project" link="/projects/crypto"  title=""/>
+                <ProjectComp img={image} alt="crypto project" link="/projects/crypto"  title=""/>
+                <ProjectComp img={image} alt="crypto project" link="/projects/crypto"  title=""/>
+                <ProjectComp img={image} alt="crypto project" link="/projects/crypto"  title=""/>
             </ div>
         );
     }
