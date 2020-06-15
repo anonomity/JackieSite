@@ -1,10 +1,18 @@
-@import url('https://fonts.googleapis.com/css2?family=Molle:ital@1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Suez+One&display=swap');
 .container {
   text-align: center;
   background-color: #fff;
   min-height: 15vh;
   display: flex;
   justify-content: space-around;
+ 
+}
+.Details{
+  justify-content: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 300px;
 }
 .Location{
   color: #ccc;
@@ -19,7 +27,8 @@
   font-size: 30px;
   color: lightslategray;
   align-self: center;
-  font-family: 'Molle', cursive;
+  font-family: 'Suez One', serif;
+
   
 }
 
@@ -36,11 +45,12 @@
 }
 .OuterTitleBox {
   align-self: flex-end;
-  justify-content: flex-end;
+  justify-content: flex-start;
+  width: 400px;
 }
 
 
-@media(max-width: 950px){
+@media(max-width: 1100px){
   .HamContainer {
     align-self: center;
     }
@@ -56,7 +66,7 @@
 
 }
 
-@media(min-width: 951px){
+@media(min-width: 1101px){
   .HamContainer{
     display: none;
   }
@@ -72,10 +82,17 @@
   .Nav{
     align-self: center;
     text-decoration: none;
+    font-weight: bold;
     color: lightslategray;
     
   }
   .Nav:hover{
     color: darkgrey;
+  }
+}
+
+@media(max-width: 700px){
+  .Details{
+    display: none;
   }
 }

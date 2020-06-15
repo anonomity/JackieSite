@@ -2,12 +2,22 @@ import React, { Component } from "react"
 import classes from "./Heading.module.css";
 import icon from "../assets/hbgr.svg";
 import SideBar from "../components/SideBar/SideBar";
-import {NavLink} from "react-router-dom";
-class Heading extends Component {
-    state = {
-        sidebar: false
-    }
+import { NavLink } from "react-router-dom";
 
+export interface IHeadingState {
+    sidebar: boolean
+}
+
+export interface IHeadingProps {
+
+}
+class Heading extends Component<IHeadingProps, IHeadingState> {
+    constructor(props: any) {
+        super(props);
+        this.state ={
+            sidebar: false
+        };
+    }
     unMountSideBar = () => {
         let sideBar = this.state.sidebar
         this.setState({
@@ -17,7 +27,11 @@ class Heading extends Component {
     render() {
         return (
             <div className={classes.container}>
-                <p className={classes.Location}>Location: <p className={classes.Bold}>Wrocław, Poland</p></p>
+                <div className={classes.Details}>
+                    <p className={classes.Location}>Location: <p className={classes.Bold}>Wrocław, Poland</p></p>
+                    <p className={classes.Location}>Email: <p className={classes.Bold}>jlauravelez@gmail.com</p></p>
+
+                </div>
                 <div className={classes.OuterTitleBox}>
                     <h1 className={classes.Titlebox}>
                         <span className={classes.Title}>JACKIE VELEZ</span>
@@ -26,9 +40,9 @@ class Heading extends Component {
                     </h1>
                 </div>
                 <div className={classes.HamContainer}>
-                    <img src={icon} className={classes.Ham} alt="drop down menu icon"  onClick={this.unMountSideBar}/>
-                   {this.state.sidebar ? <SideBar /> : null} 
-                   
+                    <img src={icon} className={classes.Ham} alt="drop down menu icon" onClick={this.unMountSideBar} />
+                    {this.state.sidebar ? <SideBar /> : null}
+
 
                 </div>
                 <div className={classes.NavCon}>
