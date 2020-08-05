@@ -14,7 +14,7 @@ export interface IHeadingProps {
 class Heading extends Component<IHeadingProps, IHeadingState> {
     constructor(props: any) {
         super(props);
-        this.state ={
+        this.state = {
             sidebar: false
         };
     }
@@ -33,11 +33,14 @@ class Heading extends Component<IHeadingProps, IHeadingState> {
 
                 </div>
                 <div className={classes.OuterTitleBox}>
-                    <h1 className={classes.Titlebox}>
-                        <span className={classes.Title}>JACKIE VELEZ</span>
-                        <span className={classes.HeadingSub}>Programmer, Educator, Creator</span>
+                    <NavLink to="/" className={classes.TitleNav}>
+                        <h1 className={classes.Titlebox}>
+                            <span className={classes.Title}>JACKIE VELEZ</span>
+                            <span className={classes.HeadingSub}>Programmer, Educator, Creator</span>
 
-                    </h1>
+                        </h1>
+
+                    </NavLink>
                 </div>
                 <div className={classes.HamContainer}>
                     <img src={icon} className={classes.Ham} alt="drop down menu icon" onClick={this.unMountSideBar} />
@@ -47,11 +50,11 @@ class Heading extends Component<IHeadingProps, IHeadingState> {
                 </div>
                 <div className={classes.NavCon}>
                     <NavLink to="/projects" className={classes.Nav}>Projects</NavLink>
-                    <NavLink to="/courses" className={classes.Nav}>Courses</NavLink>
                     <NavLink to="/blog" className={classes.Nav}>Blog</NavLink>
                     <NavLink to="/students" className={classes.Nav}>Students</NavLink>
 
                 </div>
+                
             </div>
         )
     }

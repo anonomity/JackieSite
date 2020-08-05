@@ -1,0 +1,22 @@
+.AboutBox{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-around;
+   
+    
+
+}
+.text {
+    line-height: 1.8; 
+    width: 80vw;
+
+}
+
+.Me{
+    width: 200px;
+    height: 275px;
+}
+.AboutMe{
+    font-size: 15px;
+    width:70%;
+}

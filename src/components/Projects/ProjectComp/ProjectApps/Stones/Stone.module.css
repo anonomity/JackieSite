@@ -1,0 +1,21 @@
+.Stone1 {
+  fill: #202a43;
+}
+.Stone2{
+        fill:#fffffa;
+        stroke:#202A43;
+        stroke-width:3;
+        stroke-miterlimit:10;
+      }
+
+.svg_wrapper {
+  transform: scale(0.5);
+}
+
+svg {
+  width: 100%;
+  height: 100vh;
+  display: grid;
+  align-items: center;
+  justify-content: center;
+}

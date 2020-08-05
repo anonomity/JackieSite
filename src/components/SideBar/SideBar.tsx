@@ -8,7 +8,6 @@ class SideBar extends Component {
                 <NavLink to="/blog" className={classes.SideItems}>Blog</NavLink>
                 <NavLink to="/students" className={classes.SideItems}>Students</NavLink>
                 <NavLink to="/projects" className={classes.SideItems}>Projects</NavLink>
-                <NavLink to="/courses" className={classes.SideItems}>Courses</NavLink>
             </div>
         )
     }
