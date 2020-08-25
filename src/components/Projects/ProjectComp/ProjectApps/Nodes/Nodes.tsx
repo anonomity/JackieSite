@@ -1,5 +1,4 @@
 import React, {Component} from "react";
-import classes from "./Nodes.module.css";
 
 class Nodes extends Component {
     render() {

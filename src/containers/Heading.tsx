@@ -28,8 +28,8 @@ class Heading extends Component<IHeadingProps, IHeadingState> {
         return (
             <div className={classes.container}>
                 <div className={classes.Details}>
-                    <p className={classes.Location}>Location: <p className={classes.Bold}>Wrocław, Poland</p></p>
-                    <p className={classes.Location}>Email: <p className={classes.Bold}>jlauravelez@gmail.com</p></p>
+                    <p className={classes.Location}>Location:</p> <p className={classes.Bold}>Wrocław, Poland</p>
+                    <p className={classes.Location}>Email:</p> <p className={classes.Bold}>jlauravelez@gmail.com</p>
 
                 </div>
                 <div className={classes.OuterTitleBox}>

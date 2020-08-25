@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import classes from "./AboutMe.module.css"
-import jack from "../../assets/Jack.jpg"
 import {TechSticker} from "../../components/TechSticker/TechSticker";
 class AboutMe extends Component {
 
@@ -11,7 +10,7 @@ class AboutMe extends Component {
                 <div className={classes.AboutBox}>
                    
                    
-                        <p className={classes.text}>
+                        <div className={classes.text}>
                             <h2>Tech Background</h2>
                             Hello, Jackie here. Hope you enjoy my little web page, I had a lot of fun programming and designing it. When making this website I stressed on 
                             designing it myself and not using external libraries for the UI. Technologies used are: 
@@ -29,7 +28,7 @@ class AboutMe extends Component {
                             an amature but It's really fun nonetheless! 
                                 
                                 
-                        </p>
+                        </div>
                    
                 </div>
 
