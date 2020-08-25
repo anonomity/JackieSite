@@ -1,8 +1,8 @@
 .sticker {
     display: inline;
-    border: 2px solid lightslategray;
+    /* border: 2px solid lightslategray; */
     border-radius: 10px;
     background-color: #ccc;
-    padding: 2px 2px;
+    padding: 3px 3px;
     margin: 2px 2px;
 }

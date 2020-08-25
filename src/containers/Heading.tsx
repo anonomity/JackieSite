@@ -51,7 +51,7 @@ class Heading extends Component<IHeadingProps, IHeadingState> {
                 <div className={classes.NavCon}>
                     <NavLink to="/projects" className={classes.Nav}>Projects</NavLink>
                     <NavLink to="/blog" className={classes.Nav}>Blog</NavLink>
-                    <NavLink to="/students" className={classes.Nav}>Students</NavLink>
+                    <NavLink to="/" className={classes.Nav}>About Me</NavLink>
 
                 </div>
                 
