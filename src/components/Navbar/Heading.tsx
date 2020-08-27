@@ -1,7 +1,7 @@
 import React, { Component } from "react"
 import classes from "./Heading.module.css";
-import icon from "../assets/hbgr.svg";
-import SideBar from "../components/SideBar/SideBar";
+import icon from "../../assets/hbgr.svg";
+import SideBar from "../SideBar/SideBar";
 import { NavLink } from "react-router-dom";
 
 export interface IHeadingState {
@@ -28,8 +28,10 @@ class Heading extends Component<IHeadingProps, IHeadingState> {
         return (
             <div className={classes.container}>
                 <div className={classes.Details}>
-                    <p className={classes.Location}>Location:</p> <p className={classes.Bold}>Wrocław, Poland</p>
-                    <p className={classes.Location}>Email:</p> <p className={classes.Bold}>jlauravelez@gmail.com</p>
+                    <div className={classes.LocCont}><p className={classes.Location}>Location:</p> <p className={classes.Bold}>Wrocław, Poland</p></div>
+                    <div className={classes.LocCont}><p className={classes.Location}>Email:</p> <p className={classes.Bold}>jlauravelez@gmail.com</p></div>
+                    
+                    
 
                 </div>
                 <div className={classes.OuterTitleBox}>

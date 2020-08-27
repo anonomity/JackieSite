@@ -1,5 +1,5 @@
 import React, {Component} from "react";
-import Heading from "../Heading"
+import Heading from "../../components/Navbar/Heading"
 
 import classes from "./Layout.module.css";
 class Layout extends Component {

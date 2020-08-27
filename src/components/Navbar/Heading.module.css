@@ -18,11 +18,15 @@
   justify-content: space-between;
   width: 300px;
 }
+.LocCont {
+  align-self: center;
+  align-self: flex-end;
+}
 .Location{
   color: #ccc;
-  align-self: center;
+
   font-size: 15px;
-  align-self: flex-end;
+  
 }
 .Bold{
   color: darkgrey
