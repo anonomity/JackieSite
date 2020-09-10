@@ -1,6 +1,6 @@
 import React, { Component } from "react"
 import classes from "./Heading.module.css";
-import icon from "../../assets/hbgr.svg";
+import icon from "../../images/hbgr.svg";
 import SideBar from "../SideBar/SideBar";
 import { NavLink } from "react-router-dom";
 
