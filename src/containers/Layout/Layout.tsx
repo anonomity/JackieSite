@@ -8,7 +8,7 @@ class Layout extends Component {
 
         return(
             <div className={classes.body}>
-                <Heading />
+               
                 <hr />
                 <main className={classes.content}>{this.props.children}</main>
          

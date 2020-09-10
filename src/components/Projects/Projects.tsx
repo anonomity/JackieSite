@@ -1,8 +1,8 @@
 import React, { PureComponent } from 'react';
 import classes from "./Project.module.css";
 import ProjectComp from "./ProjectComp/ProjectComp";
-import enigma from "../../assets/enigma.jpg";
-import catty from "../../assets/catlogo.svg";
+import enigma from "../../images/enigma.jpg";
+import catty from "../../images/catlogo.svg";
 class Projects extends PureComponent {
 
     render() {
