@@ -1,29 +1,31 @@
 import React, { Component } from "react"
 import classes from "./Heading.module.css";
 import icon from "../../images/hbgr.svg";
-import SideBar from "../SideBar/SideBar";
-import { NavLink } from "react-router-dom";
+import {Link} from 'gatsby'
+// import SideBar from "../SideBar/SideBar";
 
-export interface IHeadingState {
-    sidebar: boolean
-}
+
+// export interface IHeadingState {
+//     sidebar: boolean
+// }
 
 export interface IHeadingProps {
+    title: string
 
 }
-class Heading extends Component<IHeadingProps, IHeadingState> {
-    constructor(props: any) {
-        super(props);
-        this.state = {
-            sidebar: false
-        };
-    }
-    unMountSideBar = () => {
-        let sideBar = this.state.sidebar
-        this.setState({
-            sidebar: !sideBar
-        })
-    }
+class Heading extends Component<IHeadingProps, null> {
+    // constructor(props: any) {
+    //     super(props);
+    //     this.state = {
+    //         sidebar: false
+    //     };
+    // }
+    // unMountSideBar = () => {
+    //     let sideBar = this.state.sidebar
+    //     this.setState({
+    //         sidebar: !sideBar
+    //     })
+    // }
     render() {
         return (
             <div className={classes.container}>
@@ -35,25 +37,25 @@ class Heading extends Component<IHeadingProps, IHeadingState> {
 
                 </div>
                 <div className={classes.OuterTitleBox}>
-                    <NavLink to="/" className={classes.TitleNav}>
+                    <Link to="/" className={classes.TitleNav}>
                         <h1 className={classes.Titlebox}>
-                            <span className={classes.Title}>JACKIE VELEZ</span>
+        <span className={classes.Title}>{this.props.title}</span>
                             <span className={classes.HeadingSub}>Programmer, Educator, Creator</span>
 
                         </h1>
 
-                    </NavLink>
+                    </Link>
                 </div>
-                <div className={classes.HamContainer}>
+                {/* <div className={classes.HamContainer}>
                     <img src={icon} className={classes.Ham} alt="drop down menu icon" onClick={this.unMountSideBar} />
                     {this.state.sidebar ? <SideBar /> : null}
 
 
-                </div>
+                </div> */}
                 <div className={classes.NavCon}>
-                    <NavLink to="/projects" className={classes.Nav}>Projects</NavLink>
-                    <NavLink to="/blog" className={classes.Nav}>Blog</NavLink>
-                    <NavLink to="/" className={classes.Nav}>About Me</NavLink>
+                    <Link to="/projects" className={classes.Nav}>Projects</Link>
+                    <Link to="/blog" className={classes.Nav}>Blog</Link>
+                    <Link to="/" className={classes.Nav}>About Me</Link>
 
                 </div>
                 
