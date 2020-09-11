@@ -1,1 +1,1 @@
-{"componentChunkName":"component---src-pages-blog-tsx","path":"/blog/","result":{"pageContext":{}},"staticQueryHashes":["3649515864"]}
+{"componentChunkName":"component---src-pages-blog-tsx","path":"/blog/","result":{"data":{"allMdx":{"edges":[{"node":{"frontmatter":{"title":"second","path":"/second"}}},{"node":{"frontmatter":{"title":"Dynamic Markdown Pages","path":"/dynamic-markdown"}}}]}},"pageContext":{}},"staticQueryHashes":["3649515864"]}

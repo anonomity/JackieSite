@@ -22,6 +22,6 @@
   "include": [
     "src/**/*.ts",
     "src/**/*.test.ts",
-    "src/**/*.test.tsx", "src/components/layout/Layout.tsx"
+    "src/**/*.test.tsx", "src/components/layout/Layout.tsx", "src/templates/blogPost.tsx"
   ]
 }

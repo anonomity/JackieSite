@@ -1,16 +1,43 @@
 import React from 'react';
-import BlogPost from '../components/Blog/BlogPost/BlogPost';
-import {text1, text12, text2} from '../components/Blog/blogText/text';
-import {TechStickers} from '../components/TechSticker/TechStickers';
+
 import Layout from "../components/layout/Layout";
-export default function Blog() {
-    return( 
-    <Layout>
-        <BlogPost name="Rethinking this blog format" text={text2} sticker={<TechStickers title={["Gatsby","server-side","static site generator"]} />} text2={""} date="September 1, 2020"/>
-        <BlogPost name="deeper look of node / javascript" text={text1}
-         sticker={<TechStickers title={["thread pool", "non-blocking", "event-driven", "event-loop","callstack", "Javascript runtime", "I/O", "asyncronous", "single-threaded", "concurrent"]} /> } 
-         text2={text12} date="August 29, 2020"/>
-    </Layout>
-    )
+import { graphql } from "gatsby"
+import Posts, { IPostProps } from '../components/posts'
+
+export interface IBlogProps{
+    data: {allMdx: {edges : {node: {frontmatter : {title: string, path: string}}}} }
 }
 
+const Blog = ({data} : IPostProps) => {
+    
+   
+        return (
+            <Layout>
+                <div style={{ position: 'relative', left: 0, marginBottom: '50px' }}>
+    
+                <Posts data={data} />
+                </div>
+            </Layout>
+        )
+    }
+
+
+
+
+export const query = graphql`
+query BlogQuery {
+  allMdx{
+     	edges{
+        node{
+          frontmatter{
+            title
+            path
+          }
+        }
+      }
+      
+    }
+  }
+
+`
+export default Blog

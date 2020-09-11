@@ -6,13 +6,13 @@ module.exports = {
   },
    plugins: [
     `gatsby-plugin-react-helmet`,
-    // {
-    //   resolve: `gatsby-source-filesystem`,
-    //   options: {
-    //     name: `pages`,
-    //     path: `${__dirname}/src/pages/Lessons`
-    //   }
-    // },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `pages`,
+        path: `${__dirname}/src/pages/BlogPosts`
+      }
+    },
     `gatsby-plugin-mdx`,
     {
       resolve: `gatsby-source-filesystem`,
