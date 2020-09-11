@@ -1,12 +1,13 @@
-import React, { Component } from "react";
-import classes from "./AboutMe.module.css"
-import {TechSticker} from "../../components/TechSticker/TechSticker";
-class AboutMe extends Component {
+import React from "react";
+import classes from "./aboutme.module.css"
+import {TechSticker} from "../components/TechSticker/TechSticker";
+import Layout from "../components/layout/Layout";
 
-    render() {
+function AboutMe() {
+
         return (
-            <div style={{textAlign: 'center'}}>
-                <h1 >About Moi</h1>
+            <Layout >
+                <h1 style={{textAlign: 'center'}}>About Moi</h1>
                 <div className={classes.AboutBox}>
                    
                    
@@ -34,8 +35,8 @@ class AboutMe extends Component {
 
                 
                ``
-            </div>
+            </Layout>
         )
-    }
+    
 }
 export default AboutMe

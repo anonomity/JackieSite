@@ -1,12 +1,15 @@
 import React, { PureComponent } from 'react';
-import classes from "./Project.module.css";
-import ProjectComp from "./ProjectComp/ProjectComp";
-import enigma from "../../images/enigma.jpg";
-import catty from "../../images/catlogo.svg";
+import classes from "../components/Projects/Project.module.css";
+import ProjectComp from "../components/Projects/ProjectComp/ProjectComp";
+import enigma from "../images/enigma.jpg";
+import catty from "../images/catlogo.svg";
+import Layout from '../components/layout/Layout';
+
 class Projects extends PureComponent {
 
     render() {
         return (
+            <Layout>
             <div className={classes.ProjectApp}>
                 <ProjectComp img={catty} alt="Catty Website project" link="/projects/cattycornerclubhouse"  title="Catty Website"/>
                 <ProjectComp img={enigma} alt="crypto project" link="/projects/crypto" title="Ceasar Crypto Cipher"/>
@@ -15,6 +18,7 @@ class Projects extends PureComponent {
                 {/* <ProjectComp img={image} alt="crypto project" link="/projects/crypto"  title=""/> */}
                 {/* <ProjectComp img={image} alt="crypto project" link="/projects/crypto"  title=""/> */}
             </ div>
+            </Layout>
         );
     }
 }

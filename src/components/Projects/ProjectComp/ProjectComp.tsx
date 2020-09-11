@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import classes from "./ProjectComp.module.css";
-import { Link } from "react-router-dom";
+import { Link } from "gatsby";
 export interface IProjectCompProps {
     img: string,
     alt: string,

@@ -1,6 +1,6 @@
 import React, { PureComponent } from 'react';
 import classes from "./Cryptography.module.css"
-
+import Layout from '../../components/layout/Layout';
 const alphabet: Array<string> = [
     "A",
     "B",
@@ -131,6 +131,7 @@ class Cryptography extends PureComponent<ICryptographydProps, ICryptographydStat
             })
         }
         return (
+            <Layout>
             <div className={classes.App}>
                 <input className={classes.Input}
                     value={this.state.encrypt}
@@ -147,6 +148,7 @@ class Cryptography extends PureComponent<ICryptographydProps, ICryptographydStat
                     {Encryption}
                 </div>
             </div>
+            </ Layout>
         );
     }
 }
