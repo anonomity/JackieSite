@@ -5,7 +5,7 @@
   "dependencies": {
     "@mdx-js/react": "^1.6.16",
     "@types/node": "^12.12.58",
-    "@types/styled-components": "^5.1.2",
+    "@types/styled-components": "^5.1.4",
     "gatsby": "^2.24.57",
     "gatsby-plugin-mdx": "^1.2.39",
     "gatsby-plugin-react-helmet": "^3.3.10",
