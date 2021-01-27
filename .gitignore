@@ -28,5 +28,5 @@ yarn-error.log*
 
 /.cache
 
-/public/
-public/page-data/*
+/public
+/public/page-data/*
