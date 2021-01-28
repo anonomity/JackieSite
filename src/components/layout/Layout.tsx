@@ -1,6 +1,6 @@
 import React from "react";
 
-import { PageProps, useStaticQuery, graphql } from "gatsby";
+import { useStaticQuery, graphql } from "gatsby";
 import { Heading } from "../Navbar/Heading";
 
 type DataProps = {
