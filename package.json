@@ -8,7 +8,7 @@
     "@types/node": "^12.12.58",
     "@types/styled-components": "^5.1.2",
     "gatsby": "^2.24.57",
-    "gatsby-plugin-mdx": "^1.2.39",
+    "gatsby-plugin-mdx": "^1.2.40",
     "gatsby-plugin-react-helmet": "^3.3.10",
     "gatsby-source-filesystem": "^2.3.29",
     "node-sass": "^4.14.1",
