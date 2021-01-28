@@ -1,19 +1,15 @@
-import React, { Component } from "react"
+import React, { Component } from "react";
 
-import { PageProps, useStaticQuery, graphql } from "gatsby"
-import Heading from '../Navbar/Heading';
+import { PageProps, useStaticQuery, graphql } from "gatsby";
+import { Heading } from "../Navbar/Heading";
 
 type DataProps = {
-  children: Node
-}
+  children: Node;
+};
 
-type DataState = {
+type DataState = {};
 
-}
-
-function Layout(DataProps){
-
-
+function Layout(DataProps) {
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
       site {
@@ -22,21 +18,14 @@ function Layout(DataProps){
         }
       }
     }
-  `)
-    console.log(data)
-    return (
-      <div>
-        <Heading title={data.site.siteMetadata.title}/>
-        <main>{DataProps.children} </ main>
-      </ div>
-    )
-  
+  `);
+  console.log(data);
+  return (
+    <div>
+      <Heading title={data.site.siteMetadata.title} />
+      <main>{DataProps.children} </main>
+    </div>
+  );
 }
 
-
-
-
-
-
-
-export default Layout
+export default Layout;
