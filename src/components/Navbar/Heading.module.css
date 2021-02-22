@@ -1,17 +1,15 @@
-@import url('https://fonts.googleapis.com/css2?family=Suez+One&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Suez+One&display=swap");
 .container {
   text-align: center;
   background-color: #fff;
   min-height: 15vh;
   display: flex;
   justify-content: space-around;
- 
 }
 .TitleNav {
   text-decoration: none;
-  
 }
-.Details{
+.Details {
   justify-content: center;
   display: flex;
   flex-direction: row;
@@ -22,34 +20,29 @@
   align-self: center;
   align-self: flex-end;
 }
-.Location{
+.Location {
   color: #ccc;
 
   font-size: 15px;
-  
 }
-.Bold{
-  color: darkgrey
+.Bold {
+  color: darkgrey;
 }
-.Title{
+.Title {
   font-size: 30px;
   color: lightslategray;
   align-self: center;
-  font-family: 'Suez One', serif;
-
-  
+  font-family: "Suez One", serif;
 }
 
-.HeadingSub{
+.HeadingSub {
   font-size: 20px;
   color: #ccc;
-  
 }
-.Titlebox{
+.Titlebox {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  
 }
 .OuterTitleBox {
   align-self: flex-end;
@@ -57,50 +50,49 @@
   width: 400px;
 }
 
-
-@media(max-width: 1100px){
+@media (max-width: 1100px) {
   .HamContainer {
     align-self: center;
-    }
-    .Ham {
-        width: 50px;
-        height: auto; 
-        cursor: pointer;
-      
-      }
+  }
+  .Ham {
+    width: 50px;
+    height: auto;
+    cursor: pointer;
+  }
   .NavCon {
     display: none;
   }
-
 }
 
-@media(min-width: 1101px){
-  .HamContainer{
+@media (min-width: 1101px) {
+  .HamContainer {
     display: none;
   }
-  .Ham{
+  .Ham {
     display: none;
   }
-  .NavCon{
-    display:flex;
+  .NavCon {
+    display: flex;
     flex-direction: row;
+    align-items: center;
     justify-content: space-between;
     width: 300px;
   }
-  .Nav{
-    align-self: center;
+  .Nav {
+    margin-top: 50px;
+    align-items: center;
     text-decoration: none;
     font-weight: bold;
+    font-size: x-large;
     color: lightslategray;
-    
   }
-  .Nav:hover{
-    color: darkgrey;
+  .Nav:hover {
+    color: rgb(152, 178, 205);
   }
 }
 
-@media(max-width: 700px){
-  .Details{
+@media (max-width: 700px) {
+  .Details {
     display: none;
   }
 }

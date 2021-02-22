@@ -3,7 +3,7 @@ import classes from "./Heading.module.css";
 import icon from "../../images/hbgr.svg";
 import { Link } from "gatsby";
 import SideBar from "../SideBar/SideBar";
-
+import { TechSticker } from "../TechSticker/TechSticker";
 interface IHeadingState {
   sidebar: boolean;
 }
@@ -46,14 +46,14 @@ export const Heading: FC<IHeadingProps> = ({ title }) => {
         {sidebar ? <SideBar /> : null}
       </div>
       <div className={classes.NavCon}>
-        <Link to="/projects" className={classes.Nav}>
+        {/* <Link to="/projects" className={classes.Nav}>
           Projects
-        </Link>
+        </Link> */}
         <Link to="/blog" className={classes.Nav}>
           Blog
         </Link>
         <Link to="/aboutme" className={classes.Nav}>
-          About Me
+          About
         </Link>
       </div>
     </div>
