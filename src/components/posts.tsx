@@ -31,7 +31,7 @@ const Posts = ({ data }: IPostProps) => {
                 border: "1px solid ",
               }}
             >
-              {frontmatter.title}
+              {frontmatter.title} {frontmatter.status}
             </div>
           </Link>
         );

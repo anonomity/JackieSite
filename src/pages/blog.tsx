@@ -7,7 +7,9 @@ import Posts, { IPostProps } from "../components/posts";
 export interface IBlogProps {
   data: {
     allMdx: {
-      edges: { node: { frontmatter: { title: string; path: string } } };
+      edges: {
+        node: { frontmatter: { title: string; path: string; status: string } };
+      };
     };
   };
 }
@@ -28,6 +30,7 @@ export const query = graphql`
           frontmatter {
             title
             path
+            status
           }
         }
       }

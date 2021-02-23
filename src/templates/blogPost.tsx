@@ -4,18 +4,25 @@ import Layout from "../components/layout/Layout";
 import { MDXRenderer } from "gatsby-plugin-mdx";
 
 export interface ITemplateProps {
-  data: { mdx: { frontmatter: { date: string; title: string }; body: any } };
+  data: {
+    mdx: {
+      frontmatter: { date: string; title: string; status: string };
+      body: any;
+    };
+  };
 }
 
 const Template = ({ data }: ITemplateProps) => {
   const title = data.mdx.frontmatter.title;
   const date = data.mdx.frontmatter.date;
+  const status = data.mdx.frontmatter.status;
 
   const body = data.mdx.body;
   return (
     <Layout>
       <h1 style={{ textAlign: "center" }}>{title}</h1>
       <h3 style={{ textAlign: "center", color: "darkgray" }}>{date}</h3>
+      <h3 style={{ textAlign: "center", color: "darkgray" }}>{status}</h3>
       <MDXRenderer>{body}</MDXRenderer>
     </Layout>
   );
@@ -28,6 +35,7 @@ export const query = graphql`
       frontmatter {
         title
         date
+        status
       }
     }
   }
