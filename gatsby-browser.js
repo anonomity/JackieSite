@@ -6,7 +6,7 @@ import Activity from "./src/components/ui/Activity";
 
 const MyH2 = (props) => <Activity {...props} />;
 const MyH3 = (props) => <h3 style={{ textAlign: "center" }} {...props} />;
-const P = (props) => <p style={{ textAlign: "center" }} {...props} />;
+const P = (props) => <p style={{ fontSize: 20 }} {...props} />;
 const OL = (props) => (
   <ol style={{ textAlign: "center", listStylePosition: "inside" }} {...props} />
 );

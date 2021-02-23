@@ -21,10 +21,18 @@ function Layout(PageProps: { children: React.ReactNode }) {
   `);
   console.log(data);
   return (
-    <div>
+    <>
       <Heading title={data.site.siteMetadata.title} />
-      <main>{PageProps.children} </main>
-    </div>
+      <div
+        style={{
+          margin: `0 auto`,
+          maxWidth: 960,
+          padding: `0.5rem 2rem 2rem`,
+        }}
+      >
+        <main>{PageProps.children} </main>
+      </div>
+    </>
   );
 }
 
