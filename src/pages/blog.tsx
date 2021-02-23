@@ -15,9 +15,7 @@ export interface IBlogProps {
 const Blog = ({ data }: IPostProps) => {
   return (
     <Layout>
-      <div style={{ position: "relative", left: 0, marginBottom: "50px" }}>
-        <Posts data={data} />
-      </div>
+      <Posts data={data} />
     </Layout>
   );
 };

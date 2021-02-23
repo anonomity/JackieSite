@@ -50,7 +50,7 @@ export const Heading: FC<IHeadingProps> = ({ title }) => {
           Projects
         </Link> */}
         <Link to="/blog" className={classes.Nav}>
-          Blog
+          Digital Garden
         </Link>
         <Link to="/aboutme" className={classes.Nav}>
           About
