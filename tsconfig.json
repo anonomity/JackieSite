@@ -23,5 +23,5 @@
     "src/**/*.ts",
     "src/**/*.test.ts",
     "src/**/*.test.tsx", "src/components/layout/Layout.tsx", "src/templates/blogPost.tsx", "src/templates/allTagsIndex.tsx", "src/templates/singleTagIndex.tsx"
-  ]
+, "src/components/ui/Activity.tsx"  ]
 }
