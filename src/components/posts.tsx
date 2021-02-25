@@ -28,10 +28,21 @@ const Posts = ({ data }: IPostProps) => {
               style={{
                 color: "black",
                 fontSize: 20,
-                border: "1px solid ",
+                border: "1px solid #ccc",
+                display: "flex",
+                flexDirection: "column",
+                padding: 20,
+                width: 200,
+                height: 150,
               }}
             >
-              {frontmatter.title} {frontmatter.status}
+              <p style={{ fontWeight: "bold", textAlign: "center" }}>
+                {frontmatter.title} {frontmatter.status}
+              </p>
+
+              <p style={{ color: "#ccc", textAlign: "center" }}>
+                {frontmatter.date}
+              </p>
             </div>
           </Link>
         );

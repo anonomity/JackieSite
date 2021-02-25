@@ -8,7 +8,14 @@ export interface IBlogProps {
   data: {
     allMdx: {
       edges: {
-        node: { frontmatter: { title: string; path: string; status: string } };
+        node: {
+          frontmatter: {
+            title: string;
+            path: string;
+            status: string;
+            date: string;
+          };
+        };
       };
     };
   };
@@ -31,6 +38,7 @@ export const query = graphql`
             title
             path
             status
+            date
           }
         }
       }
