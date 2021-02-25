@@ -1,22 +1,27 @@
-.AboutBox{
-    display:flex;
-    flex-direction: row;
-    justify-content: space-around;
-   
-    
-
+.AboutBox {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
 }
 .text {
-    line-height: 1.8; 
-    width: 80vw;
-
+  line-height: 1.8;
+  width: 80vw;
+}
+.img {
+  width: 150px;
+  height: 150px;
+}
+.imgbox {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
 
-.Me{
-    width: 200px;
-    height: 275px;
+.Me {
+  width: 200px;
+  height: 275px;
 }
-.AboutMe{
-    font-size: 15px;
-    width:70%;
+.AboutMe {
+  font-size: 15px;
+  width: 70%;
 }
