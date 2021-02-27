@@ -39,18 +39,8 @@ function AboutMe() {
           <TechSticker title={"Python"} /> when I want to visualize and
           manipulate data, or teach kids and adults programming! I've been
           teaching kids programming since late 2018.
-          <br />
-          <h2> Hobbies </h2>
-          Currently I live in Poland, I was born in Medellin, Colombia and
-          raised in Miami, Florida. I really enjoy traveling and learning from
-          different cultures. I love reading books, Novels, Philosophy, Science,
-          and Psychological books are my favorite. I also love music, from time
-          to time I pick up the guitar or sit by the piano and just play until
-          my soul feels more at peace. Recently I started making beats with FL
-          Studio, still an amature but It's really fun nonetheless!
         </div>
       </div>
-      ``
     </Layout>
   );
 }
