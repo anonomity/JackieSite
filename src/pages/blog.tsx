@@ -14,6 +14,7 @@ export interface IBlogProps {
             path: string;
             status: string;
             date: string;
+            category: string;
           };
         };
       };
@@ -39,6 +40,7 @@ export const query = graphql`
             path
             status
             date
+            category
           }
         }
       }

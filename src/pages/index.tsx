@@ -1,18 +1,50 @@
-import React, { Component } from "react";
+import React from "react";
 
-import {Link} from 'gatsby';
-import Layout from '../components/layout/Layout';
-class App extends Component {
-  render() {
+import Layout from "../components/layout/Layout";
+import { graphql } from "gatsby";
+import Categories, { ICategoryProps } from "./categories/categories";
 
-    return (
-      <Layout>
-        <h1>Welcome to Gatsby</h1>
-      </Layout>
-    )    
-  
-  }
-
-
+export interface IIndexProps {
+  data: {
+    allMdx: {
+      edges: {
+        node: {
+          frontmatter: {
+            title: string;
+            path: string;
+            status: string;
+            date: string;
+            category: string;
+          };
+        };
+      };
+    };
+  };
 }
+
+const App = ({ data }: ICategoryProps) => {
+  return (
+    <Layout>
+      <Categories data={data} />
+    </Layout>
+  );
+};
+
+export const query = graphql`
+  query CategoryQuery {
+    allMdx {
+      edges {
+        node {
+          frontmatter {
+            title
+            path
+            status
+            date
+            category
+          }
+        }
+      }
+    }
+  }
+`;
 export default App;
