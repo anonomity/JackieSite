@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "gatsby";
-
+import classes from "./posts.module.css";
 export interface IPostProps {
   data: { allMdx: { edges: any } };
 }
@@ -24,19 +24,13 @@ const Posts = ({ data }: IPostProps) => {
             to={frontmatter.path}
             style={{ textDecoration: "none" }}
           >
-            <div
-              style={{
-                color: "black",
-                fontSize: 20,
-                border: "1px solid #ccc",
-                display: "flex",
-                flexDirection: "column",
-                padding: 20,
-                width: 200,
-                height: 150,
-              }}
-            >
-              <p style={{ fontWeight: "bold", textAlign: "center" }}>
+            <div className={classes.box}>
+              <p
+                style={{
+                  fontWeight: "bold",
+                  textAlign: "center",
+                }}
+              >
                 {frontmatter.title} {frontmatter.status}
               </p>
 
