@@ -16,6 +16,7 @@ export interface IBlogProps {
             date: string;
             category: string;
           };
+          timeToRead: string;
         };
       };
     };
@@ -42,6 +43,7 @@ export const query = graphql`
             date
             category
           }
+          timeToRead
         }
       }
     }

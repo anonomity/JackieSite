@@ -8,6 +8,7 @@ export interface ITemplateProps {
     mdx: {
       frontmatter: { date: string; title: string; status: string };
       body: any;
+      timeToRead: string;
     };
   };
 }
@@ -16,6 +17,7 @@ const Template = ({ data }: ITemplateProps) => {
   const title = data.mdx.frontmatter.title;
   const date = data.mdx.frontmatter.date;
   const status = data.mdx.frontmatter.status;
+  const timeToRead = data.mdx.timeToRead;
 
   const body = data.mdx.body;
   return (
@@ -23,6 +25,9 @@ const Template = ({ data }: ITemplateProps) => {
       <h1 style={{ textAlign: "center" }}>{title}</h1>
       <h3 style={{ textAlign: "center", color: "darkgray" }}>{date}</h3>
       <h3 style={{ textAlign: "center", color: "darkgray" }}>{status}</h3>
+      <h3 style={{ textAlign: "center", color: "darkgray" }}>
+        {timeToRead} minutes
+      </h3>
       <MDXRenderer>{body}</MDXRenderer>
     </Layout>
   );
@@ -37,6 +42,7 @@ export const query = graphql`
         date
         status
       }
+      timeToRead
     }
   }
 `;
