@@ -18,6 +18,7 @@ const Posts = ({ data }: IPostProps) => {
     >
       {edges.map((edge) => {
         const { frontmatter } = edge.node;
+
         return (
           <Link
             key={frontmatter.title}
