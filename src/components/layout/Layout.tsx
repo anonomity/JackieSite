@@ -31,17 +31,17 @@ function Layout(PageProps: { children: React.ReactNode }) {
           padding: `0.5rem 2rem 2rem`,
         }}
       >
-        <main>{PageProps.children} </main>
+        <main style={{ marginBottom: "13vh" }}>{PageProps.children} </main>
         <div
           style={{
             position: "fixed",
-            bottom: -17,
+            bottom: 0,
             backgroundColor: "#fff",
-            width: "100%",
+            width: "100vw",
             height: "13vh",
             display: "flex",
             flexDirection: "row",
-            justifyContent: "space-around",
+            justifyContent: "center",
           }}
         >
           <img

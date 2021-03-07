@@ -7,9 +7,7 @@ import Activity from "./src/components/ui/Activity";
 const MyH2 = (props) => <Activity {...props} />;
 const MyH3 = (props) => <h3 style={{ textAlign: "center" }} {...props} />;
 const P = (props) => <p style={{ fontSize: 20 }} {...props} />;
-const OL = (props) => (
-  <ol style={{ textAlign: "center", listStylePosition: "inside" }} {...props} />
-);
+// const OL = (props) => <ol style={{ listStylePosition: "inside" }} {...props} />;
 
 // #TODO: Make Rules / Explaining Activity Component
 
@@ -17,7 +15,7 @@ const components = {
   h2: MyH2,
   h3: MyH3,
   p: P,
-  ol: OL,
+  // ol: OL,
 };
 
 export const wrapRootElement = ({ element }) => {
