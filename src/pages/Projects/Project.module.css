@@ -1,8 +1,0 @@
-.ProjectApp {
-    margin-top: 50px;
-    margin-left: 50px;
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-around;
-    height: 100vh;
-}
