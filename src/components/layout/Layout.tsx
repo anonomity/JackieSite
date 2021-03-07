@@ -3,6 +3,7 @@ import React from "react";
 import { useStaticQuery, graphql } from "gatsby";
 import { Heading } from "../Navbar/Heading";
 import plant from "../../images/Plant.svg";
+import Monstura from "../../images/Monstura.svg";
 type DataProps = {
   children: Node;
 };
@@ -31,11 +32,31 @@ function Layout(PageProps: { children: React.ReactNode }) {
         }}
       >
         <main>{PageProps.children} </main>
-        <img
-          src={plant}
-          style={{ width: 200, position: "fixed", bottom: -15, left: "80%" }}
-          alt="plant on the bottom of the screen"
-        />
+        <div
+          style={{
+            position: "fixed",
+            bottom: -17,
+            backgroundColor: "#fff",
+            width: "100%",
+            height: "13vh",
+            display: "flex",
+            flexDirection: "row",
+            justifyContent: "space-around",
+          }}
+        >
+          <img
+            src={plant}
+            style={{ width: 120 }}
+            alt="plant on the bottom of the screen"
+          />
+          <img
+            src={Monstura}
+            style={{
+              width: 120,
+            }}
+            alt="plant on the bottom of the screen"
+          />
+        </div>
       </div>
     </>
   );
