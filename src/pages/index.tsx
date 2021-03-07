@@ -25,7 +25,7 @@ export interface IIndexProps {
 const App = ({ data }: ICategoryProps) => {
   return (
     <Layout>
-      <Categories data={data} />
+      <p>not a real page</p>
     </Layout>
   );
 };
