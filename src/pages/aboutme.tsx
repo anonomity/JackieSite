@@ -33,12 +33,23 @@ function AboutMe() {
           though I wasn't super serious about it until January of 2020, since
           then I've been expanding my Front and Backend knowledge with
           technologies such as
-          <TechSticker title={"NodeJS"} />, <TechSticker title={"Redux"} />,{" "}
-          <TechSticker title={"REST"} />. Though my programming interests are
-          not limited to Web Programming, I do also enjoy{" "}
-          <TechSticker title={"Python"} /> when I want to visualize and
-          manipulate data, or teach kids and adults programming! I've been
-          teaching kids programming since late 2018.
+          <TechSticker title={"NodeJS"} />,<TechSticker title={"Gatsby"} />,
+          <TechSticker title={"MongoDB"} /> ,<TechSticker title={"Firebase"} />{" "}
+          ,<TechSticker title={"Redux"} />, <TechSticker title={"REST"} />.
+          Though my programming interests are not limited to Web Programming, I
+          do also enjoy <TechSticker title={"Python"} /> when I want to
+          visualize and manipulate data, or teach kids and adults programming!
+          I've been teaching kids programming since late 2018.
+          <h2>My Plants</h2>
+          You may have noticed some cool plants hanging around the website. Well
+          I really love those little guys. Nature and plants are a big part of
+          my life, I love growing regular plants, hydroponic plants and or
+          gardening. Nurturing something and watching it grow is such a relaxing
+          therapy. And when I'm not getting my hands dirty with dirt or water
+          nutriently, you'll sometimes find me on{" "}
+          <TechSticker title={"Adobe Illustrator"} /> drawing some more. All my
+          plants can be in .svg and they are free to{" "}
+          <a href="google.com">download here</a>
         </div>
       </div>
     </Layout>
