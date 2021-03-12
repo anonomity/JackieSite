@@ -1,0 +1,113 @@
+---
+path: "/random-walk"
+date: "12/03/2021"
+title: "Random Walk using Python 🐍"
+category: "Youtube, Python"
+tags: []
+exerpt: "Random Walk"
+status: "🌱"
+---
+
+import img1 from "./img1.png";
+import random from "./random.png";
+import randomWalk from "./randomWalk.gif";
+
+## Daniel Shiffman
+
+First and foremost I would like to say that I got the idea after reading Daniel Shifman's book _The Nature Of Code_ if you're into that kind of thing, I definitly
+would urge you to check it out, its super interesting and your brain will be bursting with ideas of what to code gauranteed 👍. I'm writing this because in the
+book he wrote the random walk in Processing which is a highly interactive programming language that is super fun and helps people learn and visualize and have
+a lot of fun with code, but I really wanted to do it in Python so _here it is_
+
+## Let's get started
+
+So for this program all you'll need to have is Python, I will be using 3.9, but I'm sure 3+ should be good. We will be using 2 libraries that already come shipped
+with python, turtle and random. So random is a library that generates random number (of course its not 100% random because it uses an algorithm but its good
+enough for now). Turtle is a really nice visual library on python that is amazing for making shapes and drawing.
+
+## Getting started
+
+Open up you favorite python IDE and create a fresh new file, at the top you will
+`import turtle.`
+Now that we have access to the library we will
+create our first turtle. so for simplicity I will name it t for turtle
+
+```
+t = turtle.Pen()
+```
+
+so from this turtle library I'm access a function Pen() that will create our turtle so that we can start drawing. So this Pen function can actually take parameters,
+you can change the shap to a turtle by doing
+
+```
+t = turtle.Pen(shape="turtle")
+```
+
+or if you don't want any shape you can put
+
+```
+t = turtle.Pen(visible=False)
+```
+
+**Reminder capitilization is very important in code so make sure True has capital T and Pen has capital P**
+
+alrighty so after you make your turtle variable when you now run the program a new window will pop up titled Python Turtle Graphics and there should be a shape unless
+you put visible = to False
+
+<img src={img1} alt="turtle varaible" />  
+
+cool once you see that screen you can start playing around with your turtle, so let's start by making it move. So when we want to 
+interact with our turtle we use the variable we created, in this case it t, so if I want t to move, I must give a *direction* and 
+a *distance*. 
+```
+t.forward(100)
+```
+in this case the direction is forward and the distance is 100 pixels
+
+after writing this when you run the program again you should see your little turtle pen draw a line, in my case 100 pixels long.  
+Nice now that we got the technicalities out of the way, let's refer back to the random walk, which is our goal.  
+  
+## Getting a Random Number
+First we are going to use the analogy of flipping a coin, when we flip a coin the outcomes can either be heads or tails. Since we are in the world
+of programming its much easier to use numbers, so in this case we will be using 0 for heads and 1 for tails. in order to get a random number
+we will use our random library so I want you to go to the top of your code and under where you imported turtle we are going to import random. It's
+a really good practice to keep your imports at the top.  
+  
+once you've imported random let's use it to get a random number from 0 to 1. So in programming varaibles have a *type*, python makes
+life easier because you don't need to say what type you want you just make a variable name and it gives you what you want. But in other 
+language you need to say I want a number or I want a string (word), a number in programming is called an *integer* or int for short
+so since we want a random number 0 to 1 we want a random int. in the random library we use the function randint which is short for
+random integer, after that in the parameters for randint we need to say the range of the random number so from what number to what number, in 
+this case its from 0 to 1
+```
+randomNumber = random.randint(0,1)
+```
+I just named the random number we get randomNumber, so if we want to see the randomness in action, lets make a looooong loop and print out the
+result we get from this random number
+```
+for i in range(100000000000000):
+   randomNumber = random.randint(0,1)
+   print(randomNumber)
+```
+so when I ran ⬆️ code I got this.
+
+<img alt="random numbers" src={random} />
+
+so thats good, we are getting random numbers. Now lets hook this up to the turtle. The idea behind this is when we get heads or 0 the turtle
+will go forward and when we get tails or 1 the turtle will go backward. For now one step will be 50 pixels. So let's add some logic. Once we add
+the logic all the code should look like this 
+```
+import turtle
+import random 
+
+t= turtle.Pen()
+
+for i in range(100000000000000):
+    randomNumber = random.randint(0,1)
+    if(randomNumber == 0):
+        t.forward(50)
+    elif(randomNumber == 1):
+        t.backward(50)
+```
+
+<img src={randomWalk} alt="random walk" />
