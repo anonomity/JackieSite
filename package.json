@@ -1,6 +1,6 @@
 {
   "name": "my-typescript-app",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "private": true,
   "dependencies": {
     "@mdx-js/mdx": "^1.6.22",

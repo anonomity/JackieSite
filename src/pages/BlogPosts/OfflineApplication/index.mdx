@@ -8,7 +8,7 @@ exerpt: "I will be making my react-native app persistent with Redux"
 status: "🌱"
 ---
 
-# Regret but not fully
+## Regret but not fully
 
 So I'm in the middle of development for an app I plan on releasing soon. This started making me think about all the things that could go wrong when people
 start using this application. I implemented a REST React-Native application that using firebase as the database. When I started researching about offline capabilities
@@ -16,3 +16,73 @@ I found that firebase ships its product with solutions to making your applicatio
 application REST, so the app makes requests to a server, it basically looses all those offline features 🤦‍♀️.. But okay let's not be all negative, the _good_ thing
 about REST is that, let say for my mobile app, I don't use the server functions but I just put the firebase functions directly into my Client code, I plan on
 making a website as well so the user can sync data across all devices, so I can still use that backend code for the website.
+
+## Offline as a First class citizen 👮🏻‍♀️
+This concept is too often overlooked when creating mobile applications, it should be at the forfront when you start a project.
+For some applications it might be harder to maintain all functionality while being offline, like for instance with Instagram, 
+when the user is offline, the last feed you saw is saved to your phone storage but you can't see any new posts (makes sense).
+But for other applications, most operations should remain usable even while the connection is cut. 
+
+## Subscribing to connectivity changes
+
+Beware there is a lot of outdated information on the interwebs. I wrote and tested this in 2021 so yea..
+React native no longer supports NetInfo, so thats why we need to use the community version. 
+So firstly lets import the needed library
+```
+@react-native-community/netinfo
+```
+So using this we will add an event listener to the root stack in our navigator, that way wherever we are in the app, it will 
+detect when we loose connection and update the redux store. So in this case I'm using a Banner from the library react-native-paper,
+I also added a state variable that updates with the changing internet status so that it shows the banner when we loose or dont have
+connection
+```
+
+  const [visible, setVisible] = useState(true);
+  const [connected, setConnected] = useState(true);
+  useEffect(() => {
+    NetInfo.addEventListener((state) => {
+      if (!state.isConnected) {
+        setConnected(false);
+        dispatch(SetOffline());
+      }
+      console.log('Connection type', state.type);
+      console.log('Is connected?', state.isConnected);
+          });
+  }, [dispatch]);
+
+return(
+    <View>
+        {connected ? null : (
+          <Banner
+            visible={visible}
+            actions={[
+              {
+                label: 'Fix it',
+                onPress: () => setVisible(false),
+              },
+              {
+                label: 'Learn more',
+                onPress: () => setVisible(false),
+              },
+            ]}
+            icon={(props) => (
+              <AntDesign {...props} color={'maroon'} name="wifi" />
+            )}>
+            No Internet Connection, you can continue to use the application in
+            offline mode
+          </Banner>
+        )}
+    </View>
+)
+ ```
+
+
+ ## Tests
+
+ So I'm pretty amazed at how easily the offline functions works with Firebase, but now its time for some Tests
+
+ ### 1. Go Offline -> update data -> logout -> Go Back Online -> login
+
+ Wow so I am amazed that this worked, as soon as I logged in I kept an eye on the database and it updated 🥳
+
+ 
