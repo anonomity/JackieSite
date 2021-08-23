@@ -3,7 +3,7 @@ import React from "react";
 import Layout from "../components/layout/Layout";
 import { graphql } from "gatsby";
 import Categories, { ICategoryProps } from "./categories/categories";
-
+import AboutMe from "./aboutme";
 export interface IIndexProps {
   data: {
     allMdx: {
@@ -24,9 +24,9 @@ export interface IIndexProps {
 
 const App = ({ data }: ICategoryProps) => {
   return (
-    <Layout>
-      <p>not a real page</p>
-    </Layout>
+    <div>
+      <AboutMe />
+    </div>
   );
 };
 
