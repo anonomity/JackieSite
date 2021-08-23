@@ -2,7 +2,7 @@ import React from "react";
 import classes from "./aboutme.module.css";
 import { TechSticker } from "../components/TechSticker/TechSticker";
 import Layout from "../components/layout/Layout";
-import js from "../images/techStack/js.png";
+import unity from "../images/techStack/unity.png";
 import ts from "../images/techStack/ts.png";
 import py from "../images/techStack/python.jpeg";
 import node from "../images/techStack/nodejs.jpg";
@@ -12,7 +12,7 @@ function AboutMe() {
   return (
     <Layout>
       <div className={classes.imgbox}>
-        <img src={js} alt="js" className={classes.img} />
+        <img src={unity} alt="unity" className={classes.img} />
         <img src={py} alt="py" className={classes.img} />
         <img src={node} alt="node" className={classes.img} />
         <img src={react} alt="react" className={classes.img} />

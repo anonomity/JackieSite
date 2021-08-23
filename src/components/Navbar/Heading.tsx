@@ -3,6 +3,8 @@ import classes from "./Heading.module.css";
 import icon from "../../images/hbgr.svg";
 import { Link } from "gatsby";
 import SideBar from "../SideBar/SideBar";
+import Twitch from "../../images/twitch.png";
+import Youtube from "../../images/youtube.png";
 import { TechSticker } from "../TechSticker/TechSticker";
 interface IHeadingState {
   sidebar: boolean;
@@ -19,11 +21,21 @@ export const Heading: FC<IHeadingProps> = ({ title }) => {
       <div className={classes.Details}>
         <div className={classes.LocCont}>
           <p className={classes.Location}>Location:</p>{" "}
-          <p className={classes.Bold}>Wrocław, Poland</p>
+          <p className={classes.Bold}>Miami / Poland</p>
         </div>
         <div className={classes.LocCont}>
-          <p className={classes.Location}>Email:</p>{" "}
-          <p className={classes.Bold}>jlauravelez@gmail.com</p>
+          <a href="twitch.tv/jackie_codes">
+            <p className={classes.Bold}>
+              {" "}
+              <img className={classes.social} src={Twitch} /> Twitch
+            </p>
+          </a>
+          <a href="https://www.youtube.com/channel/UCVrC7eFcep-0gPw2foMvYcQ">
+            <p className={classes.Bold}>
+              {" "}
+              <img className={classes.social} src={Youtube} /> Youtube
+            </p>
+          </a>
         </div>
       </div>
       <div className={classes.OuterTitleBox}>
