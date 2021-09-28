@@ -5,8 +5,31 @@ export interface IPostProps {
   data: { allMdx: { edges: any } };
 }
 
+enum PostType {
+  GameDev = "GameDev",
+  WebDev = "WebDev",
+  Python = "Python",
+}
+
 const Posts = ({ data }: IPostProps) => {
+  let GameDev = [];
+  let WebDev = [];
+  let Python = [];
+
   const { edges } = data.allMdx;
+
+  edges.map((post) => {
+    if (post.node.frontmatter.category === PostType.GameDev) {
+      console.log("it got in!");
+      GameDev.push(post.node.frontmatter);
+    } else if (post.node.frontmatter.category === PostType.Python) {
+      console.log("it got in! Python");
+      Python.push(post.node.frontmatter);
+    } else if (post.node.frontmatter.category === PostType.WebDev) {
+      WebDev.push(post.node.frontmatter);
+    }
+  });
+
   return (
     <div>
       <p>
@@ -24,9 +47,55 @@ const Posts = ({ data }: IPostProps) => {
           justifyContent: "space-around",
         }}
       >
-        {edges.map((edge) => {
-          const { frontmatter } = edge.node;
+        {GameDev.map((frontmatter) => {
+          return (
+            <Link
+              key={frontmatter.title}
+              to={frontmatter.path}
+              style={{ textDecoration: "none" }}
+            >
+              <div className={classes.box}>
+                <p
+                  style={{
+                    fontWeight: "bold",
+                    textAlign: "center",
+                  }}
+                >
+                  {frontmatter.title} {frontmatter.status}
+                </p>
 
+                <p style={{ color: "#ccc", textAlign: "center" }}>
+                  {frontmatter.date}
+                </p>
+              </div>
+            </Link>
+          );
+        })}
+        {Python.map((frontmatter) => {
+          return (
+            <Link
+              key={frontmatter.title}
+              to={frontmatter.path}
+              style={{ textDecoration: "none" }}
+            >
+              <div className={classes.box}>
+                <p
+                  style={{
+                    fontWeight: "bold",
+                    textAlign: "center",
+                  }}
+                >
+                  {frontmatter.title} {frontmatter.status}
+                </p>
+
+                <p style={{ color: "#ccc", textAlign: "center" }}>
+                  {frontmatter.date}
+                </p>
+              </div>
+            </Link>
+          );
+        })}
+        {WebDev.map((frontmatter) => {
           return (
             <Link
               key={frontmatter.title}

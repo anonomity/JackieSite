@@ -2,7 +2,7 @@ import React from "react";
 import { graphql } from "gatsby";
 import Layout from "../components/layout/Layout";
 import { MDXRenderer } from "gatsby-plugin-mdx";
-
+import classes from "./blogpost.module.css";
 export interface ITemplateProps {
   data: {
     mdx: {
@@ -28,7 +28,7 @@ const Template = ({ data }: ITemplateProps) => {
       <h3 style={{ textAlign: "center", color: "darkgray" }}>
         {timeToRead} minutes
       </h3>
-      <MDXRenderer>{body}</MDXRenderer>
+      <MDXRenderer className={classes.img}>{body}</MDXRenderer>
     </Layout>
   );
 };
