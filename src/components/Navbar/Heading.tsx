@@ -24,7 +24,7 @@ export const Heading: FC<IHeadingProps> = ({ title }) => {
           <p className={classes.Bold}>Miami / Poland</p>
         </div>
         <div className={classes.LocCont}>
-          <a href="twitch.tv/jackie_codes">
+          <a href="https://twitch.tv/jackie_codes">
             <p className={classes.Bold}>
               {" "}
               <img className={classes.social} src={Twitch} /> Twitch
