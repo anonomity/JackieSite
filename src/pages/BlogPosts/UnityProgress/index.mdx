@@ -8,6 +8,7 @@ exerpt: "Unity"
 status: "🌱"
 ---
 import model from "./model.jpg"
+import compare from "./compare.png"
 
 ## Hypatia 
 Hello Everyone, I'm a programmer who loves video games and as of March 2021 I started making my own games and learning Unity. What is Hypatia you might ask? Well it's a game I've been working on since May 2021
@@ -26,22 +27,50 @@ had one class in University on Java.
 
 - Scriptable Objects
 - Event System
-- Singleton 
-
+- Singleton design pattern
+- Vectors 
+- System.Action
 
 **Delegate** : is a type that represents references to methods with a particular parameter list and return type.
 - Delegates are used to pass methods as arguments to other methods.
+- like arrow functions 
 
 
 as a sidenote I've realized I had to stop using arrays as much in c# because Lists are the superior data structure.
 
-###Scriptable Objects
--Smart data containers that can hold values that also exist outside of play mode
--Globally accessible and scene independent
--Act as layers to expose and reuse common functionalities
+## Scriptable Objects
+- Smart data containers that can hold values that also exist outside of play mode
+- Globally accessible and scene independent
+- Act as layers to expose and reuse common functionalities
+- you can edit scriptable objects while in playmode
+- Using Scriptable Object as Enum States
 
-in the video, they're using a scriptable object as an event relayer that listens to unity's input system so that events can subscribe to it whenever
+
+<img src={compare} alt="difference between scriptable vs mono" />  
+
+so the only new methode you get is OnDestoy() and you don't have access to the game loop through functions like
+update and start
+
+### Scriptable Objects Vs Monobehaviors
+Scriptable objects can not be attached to components as a gameobject instead they are created a project asset 
+files
+
+
+
+Monobehaviors are always live on a game object, so by design their bound to an instance of a gameobject
+and because of that when you want to access the data for the prefab, each instance will have a copy of the transform
+and the gameobject which is a waste of space. 
+- moral of the story, if you prefab doesn't need access to gameobject or transform, and you want to save
+memory, you should use Scriptable Objects instead of Monobehaviors
+
+### Uses 
+
+- using a scriptable object as an event relayer that listens to unity's input system so that events can subscribe to it whenever
  the input is detected so that you don't need to keep program different listeners. 
+
+
+
+[youtube video on scriptable objects](https://www.youtube.com/watch?v=PVOVIxNxxeQ)
 
 
 ## Namespace
@@ -50,3 +79,5 @@ namespaces are like containers for classes, their purpose is to organize scrips 
 more powerful classes that make it much easier to access operators within the object.
 
 [youtube video on namespaces](https://www.youtube.com/watch?v=LtQs5FzdQ2k)
+
+## Vectors
