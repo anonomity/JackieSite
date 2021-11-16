@@ -47,78 +47,88 @@ const Posts = ({ data }: IPostProps) => {
           justifyContent: "space-around",
         }}
       >
-        {GameDev.map((frontmatter) => {
-          return (
-            <Link
-              key={frontmatter.title}
-              to={frontmatter.path}
-              style={{ textDecoration: "none" }}
-            >
-              <div className={classes.box}>
-                <p
-                  style={{
-                    fontWeight: "bold",
-                    textAlign: "center",
-                  }}
-                >
-                  {frontmatter.title} {frontmatter.status}
-                </p>
+        <div>
+          <h3 className={classes.centerText}>Game Dev </h3>
+          {GameDev.map((frontmatter) => {
+            return (
+              <Link
+                key={frontmatter.title}
+                to={frontmatter.path}
+                style={{ textDecoration: "none" }}
+              >
+                <div className={classes.box}>
+                  <p
+                    style={{
+                      fontWeight: "bold",
+                      textAlign: "center",
+                    }}
+                  >
+                    {frontmatter.title} {frontmatter.status}
+                  </p>
 
-                <p style={{ color: "#ccc", textAlign: "center" }}>
-                  {frontmatter.date}
-                </p>
-              </div>
-            </Link>
-          );
-        })}
-        {Python.map((frontmatter) => {
-          return (
-            <Link
-              key={frontmatter.title}
-              to={frontmatter.path}
-              style={{ textDecoration: "none" }}
-            >
-              <div className={classes.box}>
-                <p
-                  style={{
-                    fontWeight: "bold",
-                    textAlign: "center",
-                  }}
-                >
-                  {frontmatter.title} {frontmatter.status}
-                </p>
+                  <p style={{ color: "#ccc", textAlign: "center" }}>
+                    {frontmatter.date}
+                  </p>
+                </div>
+              </Link>
+            );
+          })}
+        </div>
 
-                <p style={{ color: "#ccc", textAlign: "center" }}>
-                  {frontmatter.date}
-                </p>
-              </div>
-            </Link>
-          );
-        })}
-        {WebDev.map((frontmatter) => {
-          return (
-            <Link
-              key={frontmatter.title}
-              to={frontmatter.path}
-              style={{ textDecoration: "none" }}
-            >
-              <div className={classes.box}>
-                <p
-                  style={{
-                    fontWeight: "bold",
-                    textAlign: "center",
-                  }}
-                >
-                  {frontmatter.title} {frontmatter.status}
-                </p>
+        <div>
+          <h3 className={classes.centerText}>Python Articles </h3>
+          {Python.map((frontmatter) => {
+            return (
+              <Link
+                key={frontmatter.title}
+                to={frontmatter.path}
+                style={{ textDecoration: "none" }}
+              >
+                <div className={classes.box}>
+                  <p
+                    style={{
+                      fontWeight: "bold",
+                      textAlign: "center",
+                    }}
+                  >
+                    {frontmatter.title} {frontmatter.status}
+                  </p>
 
-                <p style={{ color: "#ccc", textAlign: "center" }}>
-                  {frontmatter.date}
-                </p>
-              </div>
-            </Link>
-          );
-        })}
+                  <p style={{ color: "#ccc", textAlign: "center" }}>
+                    {frontmatter.date}
+                  </p>
+                </div>
+              </Link>
+            );
+          })}
+        </div>
+        <div>
+          <h3 className={classes.centerText}> Web dev Articles</h3>
+          {WebDev.map((frontmatter) => {
+            return (
+              <Link
+                key={frontmatter.title}
+                to={frontmatter.path}
+                style={{ textDecoration: "none" }}
+              >
+                <div className={classes.box}>
+                  <p
+                    style={{
+                      fontWeight: "bold",
+                      textAlign: "center",
+                    }}
+                  >
+                    {frontmatter.title} {frontmatter.status}
+                  </p>
+
+                  <p style={{ color: "#ccc", textAlign: "center" }}>
+                    {frontmatter.date}
+                  </p>
+                </div>
+              </Link>
+            );
+          })}
+        </div>
       </div>
     </div>
   );
