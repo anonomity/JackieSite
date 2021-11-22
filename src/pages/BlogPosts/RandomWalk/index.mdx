@@ -1,16 +1,17 @@
 ---
 path: "/random-walk"
 date: "12/03/2021"
-title: "Random Walk using Python 🐍"
+title: "Random Walk using Python"
 category: "Python"
 tags: []
 exerpt: "Random Walk"
-status: "🌱"
+status: "🌿"
 ---
 
 import img1 from "./img1.png";
 import random from "./random.png";
 import randomWalk from "./randomWalk.gif";
+import Tallpic from "../../../components/blogComponents/Tallpic";
 
 ## Daniel Shiffman
 
@@ -91,10 +92,11 @@ for i in range(100000000000000):
 ```
 so when I ran ⬆️ code I got this.
 
-<img alt="random numbers" src={random} />
+<Tallpic img ={random} alt={"random numbers"}/>
 
 so thats good, we are getting random numbers. Now lets hook this up to the turtle. The idea behind this is when we get heads or 0 the turtle
-will go forward and when we get tails or 1 the turtle will go backward. For now one step will be 50 pixels. So let's add some logic. Once we add
+will go forward and when we get tails or 1 the turtle will go backward. For now one step for the turtle will be 50 pixels (t.forward(50) but you can change it 
+to whatever you please. So let's add some logic.
 the logic all the code should look like this 
 ```
 import turtle
@@ -111,3 +113,140 @@ for i in range(100000000000000):
 ```
 
 <img src={randomWalk} alt="random walk" />
+
+boom and our turtle is randomly going forward and backward, but this is not so interesting, the interesting part comes when we add and extra dimension 😈. so how may we best 
+add this dimension? Well first we are going to need a function for the turtle.
+
+```
+#east
+t.seth(0)
+
+#north
+t.seth(90)
+
+#west
+t.seth(180)
+
+#south
+t.seth(270)
+```
+
+so these functions allow the turtle to turn in all these different directions, seth is short for setheading (set where the turtle is facing). These numbers are going to be
+the core of our random walk.
+
+
+so since we added 2 additional dimmensions, we will need 2 more random numbers. Let's test it again to ensure we do in fact get 2 more random numbers.
+
+
+```
+for i in range(100000000000000):
+   randomNumber = random.randint(0,3)
+   print(randomNumber)
+```
+
+So from this we can see that we get numbres 0 - 3. Now all we need to do is extend our if statement to include these numbers
+
+```
+for i in range(100000000000000):
+    randomNumber = random.randint(0,3)
+    if(randomNumber == 0):
+        t.forward(50)
+    elif(randomNumber == 1):
+        t.backward(50)
+    elif(randomNumber == 2):
+        pass
+    elif(randomNumber == 3):
+        pass
+```
+
+so the pass keyword is just so that it skips over what happens if the code ends up in that if statement, we will fill it out in just a bit. first we want to always make
+the turtle go forward no mater which condition the turtle ends up.
+
+
+```
+for i in range(100000000000000):
+    randomNumber = random.randint(0,3)
+    if(randomNumber == 0):
+        pass
+    elif(randomNumber == 1):
+        pass
+    elif(randomNumber == 2):
+        pass
+    elif(randomNumber == 3):
+        pass
+    t.forward(50)
+```
+
+and lastly, we just input the different t.seth() in the 4 conditions.
+
+```
+import turtle
+import random 
+
+t= turtle.Pen()
+
+for i in range(100000000000000):
+    randomNumber = random.randint(0,3)
+    if(randomNumber == 0):
+        #east
+        t.seth(0)
+    elif(randomNumber == 1):
+        #north
+        t.seth(90)
+    elif(randomNumber == 2):
+       #west
+        t.seth(180) 
+    elif(randomNumber == 3):
+       #south
+        t.seth(270) 
+    t.forward(50)
+```
+
+Voila your random walk should be fully functional in all 4 directions!
+
+
+## Adjustments 
+
+So we did great and you can just stop here if you want, but if you'd like to make it a bit better lets add some adjustments. 
+
+firstly, the turtle is going pretty slow, theres a simple function we can put after we initialize our turtle that will speed it up significantly.
+
+```
+t.speed(0)
+```
+
+ahh much better next, next its best to add a step variable so that we can easly adjust how far we want each step to take the turtle. 
+
+
+```
+import turtle
+import random 
+
+t= turtle.Pen()
+t.speed(0)
+
+step = 20
+
+for i in range(100000000000000):
+    randomNumber = random.randint(0,3)
+    if(randomNumber == 0):
+        #east
+        t.seth(0)
+    elif(randomNumber == 1):
+        #north
+        t.seth(90)
+    elif(randomNumber == 2):
+       #west
+        t.seth(180) 
+    elif(randomNumber == 3):
+       #south
+        t.seth(270) 
+    t.forward(step)
+```
+
+
+## You're turn
+
+Now you might think what we've done is pretty cool or pretty boring, but this is really only the tip of the iceburg, theres so much you can do with this concept.
+you can add additional directions, colors, circles instead of lines, and you can make cool random creations. I urge you to take this further and see what you can create.
+I really loved doing this project because it was one of the first times my programming felt alive! So please experiment on and create something unique 🤡.
