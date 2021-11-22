@@ -32,7 +32,7 @@ function Layout(PageProps: { children: React.ReactNode }) {
         }}
       >
         <main style={{ marginBottom: "13vh" }}>{PageProps.children} </main>
-        <div
+        {/* <div
           style={{
             position: "fixed",
             bottom: 0,
@@ -56,7 +56,7 @@ function Layout(PageProps: { children: React.ReactNode }) {
             }}
             alt="plant on the bottom of the screen"
           />
-        </div>
+        </div> */}
       </div>
     </>
   );
