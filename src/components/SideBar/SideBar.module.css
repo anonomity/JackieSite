@@ -31,3 +31,9 @@
     left: 85%;
   }
 }
+
+@media (max-width: 774px) {
+  .SideBar {
+    left: 40%;
+  }
+}

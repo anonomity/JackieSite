@@ -49,3 +49,12 @@
 .space {
   margin-bottom: 300px;
 }
+
+@media (max-width: 823px) {
+  .screenshot {
+    width: 100%;
+  }
+  .imgbox {
+    display: none;
+  }
+}

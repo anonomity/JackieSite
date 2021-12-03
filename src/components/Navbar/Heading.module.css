@@ -98,4 +98,7 @@
   .Details {
     display: none;
   }
+  .OuterTitleBox {
+    display: none;
+  }
 }

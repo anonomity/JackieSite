@@ -32,23 +32,16 @@ const Posts = ({ data }: IPostProps) => {
 
   return (
     <div>
-      <p>
+      <p className={classes.information}>
         So the three different rankings [🌱, 🌿, 🌳] are for the development of
         the post. When a post is new it gets the 🌱, it doesn't upgrade into 🌿
         untill I have all the research written down. The final stage of
         development 🌳 is achieved when I add all the pictures, and I organize
         the text and edit, the typos and style.
       </p>
-      <div
-        style={{
-          marginTop: 100,
-          display: "flex",
-          flexDirection: "row",
-          justifyContent: "space-around",
-        }}
-      >
-        <div>
-          <h3 className={classes.centerText}>Game Dev </h3>
+      <div className={classes.postContainer}>
+        <div className={classes.category}>
+          <h3 className={classes.categoryTitle}>Game Dev </h3>
           {GameDev.map((frontmatter) => {
             return (
               <Link
@@ -75,8 +68,8 @@ const Posts = ({ data }: IPostProps) => {
           })}
         </div>
 
-        <div>
-          <h3 className={classes.centerText}>Python Articles </h3>
+        <div className={classes.category}>
+          <h3 className={classes.categoryTitle}>Python Articles </h3>
           {Python.map((frontmatter) => {
             return (
               <Link
@@ -102,8 +95,8 @@ const Posts = ({ data }: IPostProps) => {
             );
           })}
         </div>
-        <div>
-          <h3 className={classes.centerText}> Web dev Articles</h3>
+        <div className={classes.category}>
+          <h3 className={classes.categoryTitle}> Web dev Articles</h3>
           {WebDev.map((frontmatter) => {
             return (
               <Link
