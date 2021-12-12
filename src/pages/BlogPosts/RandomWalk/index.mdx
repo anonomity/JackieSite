@@ -12,6 +12,7 @@ import img1 from "./img1.png";
 import random from "./random.png";
 import randomWalk from "./randomWalk.gif";
 import Tallpic from "../../../components/blogComponents/Tallpic";
+import Code from "../../../components/blogComponents/CodeComponent/Code.tsx";
 
 ## Daniel Shiffman
 
@@ -85,11 +86,13 @@ randomNumber = random.randint(0,1)
 ```
 I just named the random number we get randomNumber, so if we want to see the randomness in action, lets make a looooong loop and print out the
 result we get from this random number
-```
-for i in range(100000000000000):
+<Code 
+text="for i in range(100000000000000):
    randomNumber = random.randint(0,1)
-   print(randomNumber)
-```
+   print(randomNumber)"
+/>
+
+
 so when I ran ⬆️ code I got this.
 
 <Tallpic img ={random} alt={"random numbers"}/>

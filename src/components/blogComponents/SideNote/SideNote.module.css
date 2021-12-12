@@ -1,0 +1,22 @@
+.SideNote {
+  border: "1px";
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.hr {
+  border: none;
+  height: 1.5px;
+  /* Set the hr color */
+  color: #333; /* old IE */
+  background-color: #333; /* Modern Browsers */
+}
+
+.text {
+  font-size: 15px;
+}
+
+.title {
+  font-weight: "bold";
+  font-size: 25px;
+}

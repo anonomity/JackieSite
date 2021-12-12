@@ -1,0 +1,10 @@
+.text {
+}
+
+.background {
+  background-color: #ccc;
+
+  width: auto;
+  height: auto;
+  overflow: auto;
+}
