@@ -14,6 +14,16 @@ import MediumPic from "../../../components/blogComponents/Pictures/MediumPic";
 
 
 
+## Hypatia 
+Hello Everyone, I'm a programmer who loves video games and as of March 2021 I started making my own games and learning Unity. What is Hypatia you might ask? Well it's a game I've been working on since May 2021
+and its a 2D action rpg, made with pixel art. Some features it includes is Greek Mythology, Ancient Athens, and skill trees, and philosophy. I want to make an exciting game that
+users will have fun playing, but I also want people to learn along the way, that's why I'm making the game very accurate and drawing the scenes based on what it really looked like. 
+I visited Athens, Greece in June 2021 and got a first hand look at what I'm dealing with. The Acropolis Museum helped me tremendously with creating models of the city at different points of time.
+Although accuracy is very important to me, I have to twist the truth a bit to keep things interesting, thats why you might find some philosophers walking the same street that are from somewhat 
+different generations! As of now I'm developing the art, programming and music all by myself but who knows what will change! 
+
+<MediumPic img={model} alt="ancient athens model" />  
+
 ## Unity 
 Some concepts I've ran into while learning unity, before this projects I haven't had too much experience with statically typed languages, I used mostly javascript and python, though I 
 had one class in University on Java. It was a tough decision to decide which route to take to build my 2d game. Ultimately I ended up going with Unity probably more due to familiarity 
@@ -73,37 +83,18 @@ memory, you should use Scriptable Objects instead of Monobehaviors
 
 
 ## Singleton
+now this is a concept that comes when you start diving into OOP deeper. If you're a beginner programmer, now might not be the best time to understand this concept, but continue reading to see whats ahead of the horizon. A singleton is a **Design Pattern**. What is a design pattern you may ask? Well think of it this way, if you're programming somehing, *anything* chances are many other people have built that same thing you're buiding, and many people have faced the same problem as you. Because programmers have to build the same parts so often, there are some parts that have been tested and perfected and they are closest to the best solution on how to solve that problem. This is a design pattern, for our example Singleton, this is the *best* way to implement something that should only have *one* instance.  For instance in my game, there is only *one* skillbook. And how the code works is that it only instantiates the class once. The code for a singleton makes it very safe, because if we accidently instantiate two instances and update 1 and then read the other, you can see how this can get very messy. 
 
-now this is a concept that comes when you start diving into OOP deeper. If you're a beginner programmer, now might not be the best time to 
-understand this concept, but continue reading to see whats ahead of the horizon. A singleton is a **Design Pattern**. What is a design pattern 
-you may ask? 
-
-<SideNote title="Design Pattern" text="a description or template for how to solve a problem that can be used in many different situations.Think of it 
-this way, if you're programming somehing, anything chances are many other people have built that same thing you're
-buiding, and many people have faced the same problem as you. Because programmers have to build the same parts so often, there are some parts that 
-have been tested and perfected and they are closest to the best solution on how to solve that problem." />
-
-
- This is a design pattern, for our example 
-Singleton, this is the *best* way to implement something that should only have *one* instance.  For instance in my game, there is only *one* 
-skillbook. And how the code works is that it only instantiates the class once. The code for a singleton makes it very safe, because if we 
-accidently instantiate two instances and update 1 and then read the other, you can see how this can get very messy. 
-
-Its very simple to lookup singleton demonstrations all over the web so I'll leave it to you, just some important features I want to highlight, 
-is the fact that the instance variable inside of the singleton is **static** this is important because it can be easily accessed all throughout 
-your code, and you know you're accessing the correct class because there is only instance of it.
+Its very simple to lookup singleton demonstrations all over the web so I'll leave it to you, just some important features I want to highlight, is the fact that the instance variable inside of the singleton is **static** this is important because it can be easily accessed all throughout your code, and you know you're accessing the correct class because there is only instance of it.
 
 ## Delegate
-Delegates are actually something very *small* to understand, I say this because I held off learning them because the description was confusing 
-to me and in term I became intimidated, but let me try to explain it so its simple and easy to understand. You know whenever you make a new script 
-and you need to declare all the variables close to the top of the script? well a delegate is a variable that holds a function, so something like:
+Delegates are actually something very *small* to understand, I say this because I held off learning them because the description was confusing to me and in term I became intimidated, but let me try to explain it so its simple and easy to understand. You know whenever you make a new script and you need to declare all the variables close to the top of the script? well a delegate is a variable that holds a function, so something like:
 
 public delegate int PerformCalculation(int x, int y);
 
 PerformCalculation add;
 
-so all we did was made a random function that accepts 2 arguments, at this point we havent *defined* what the function/delegate does, all we did 
-was say it needs 2 variables. Then we gave out delegate a variable name, add;
+so all we did was made a random function that accepts 2 arguments, at this point we havent *defined* what the function/delegate does, all we did was say it needs 2 variables. Then we gave out delegate a variable name, add;
 
 so when you want to use it, you need to assign a function to this delegate:
 
@@ -114,12 +105,13 @@ static bool adding(int number1, int number2)
 
 add = adding; 
 
-now our delegate add has the function value adding, we did this in 2 steps, we could have named the delegate and assigned its value in one step 
-by doing this:
+now our delegate add has the function value adding, we did this in 2 steps, we could have named the delegate and assigned its value in one step by doing this:
 
 PerformCalculation add = adding;
 
 And thats all there is to delegates! Its super easy and its so important in Unity and Gamedev to pass functions to different scripts, expecially when you want to separate front and backend. 
+
+
 
 ## Event System
 
