@@ -6,10 +6,14 @@ import Activity from "./src/components/ui/Activity";
 
 // const MyH2 = (props) => <Activity {...props} />;
 const MyH3 = (props) => (
-  <p style={{ fontWeight: "bold", fontSize: 22 }} {...props} />
+  <p style={{ fontWeight: "bold", fontSize: 20 }} {...props} />
 );
+const MyH1 = (props) => <h1 style={{ textAlign: "center" }} {...props} />;
 const MyH2 = (props) => (
-  <p style={{ fontWeight: "bold", fontSize: 25 }} {...props} />
+  <p
+    style={{ fontWeight: "bold", fontSize: 27, textAlign: "center" }}
+    {...props}
+  />
 );
 const P = (props) => <p style={{ fontSize: 18, lightHeight: 3 }} {...props} />;
 const IMG = (props) => (
@@ -34,6 +38,7 @@ const components = {
   // ol: OL,
   img: IMG,
   h2: MyH2,
+  h1: MyH1,
 };
 
 export const wrapRootElement = ({ element }) => {

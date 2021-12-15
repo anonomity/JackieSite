@@ -8,13 +8,19 @@ exerpt: "Unity"
 status: "🌱"
 ---
 import model from "./model.jpg"
+import code from "./code.jpg"
 import compare from "./compare.png"
 import SideNote from "../../../components/blogComponents/SideNote/SideNote.tsx";
 import MediumPic from "../../../components/blogComponents/Pictures/MediumPic";
 
 
 
-## Unity 
+
+# 6 Important things I learned from Half a year using Unity 
+
+
+<MediumPic img={code} size={900} alt="code" />  
+
 Some concepts I've ran into while learning unity, before this projects I haven't had too much experience with statically typed languages, I used mostly javascript and python, though I 
 had one class in University on Java. It was a tough decision to decide which route to take to build my 2d game. Ultimately I ended up going with Unity probably more due to familiarity 
 and legacy. I had a couple of friends in University who had made little games here and there and all of them used Unity. I was also hesitant with how much could get done with a 
@@ -36,7 +42,7 @@ Through the 8 months of using unity at the time of writting this article, there 
 
 as a sidenote I've realized I had to stop using arrays as much in c# because Lists are the superior data structure.
 
-## Scriptable Objects
+## 1 - Scriptable Objects
 - Smart data containers that can hold values that also exist outside of play mode
 - Globally accessible and scene independent
 - Act as layers to expose and reuse common functionalities
@@ -44,9 +50,9 @@ as a sidenote I've realized I had to stop using arrays as much in c# because Lis
 - Using Scriptable Object as Enum States
 
 
-<img src={compare} alt="difference between scriptable vs mono" />  
+<MediumPic img={compare} size={900} alt="difference between scriptable vs mono" />  
 
-so the only new methode you get is OnDestoy() and you don't have access to the game loop through functions like
+so the only new method you get is OnDestoy() and you don't have access to the game loop through functions like
 update and start
 
 ### Scriptable Objects Vs Monobehaviors
@@ -72,7 +78,7 @@ memory, you should use Scriptable Objects instead of Monobehaviors
 
 
 
-## Singleton
+## 2 - Singleton
 
 now this is a concept that comes when you start diving into OOP deeper. If you're a beginner programmer, now might not be the best time to 
 understand this concept, but continue reading to see whats ahead of the horizon. A singleton is a **Design Pattern**. What is a design pattern 
@@ -93,7 +99,7 @@ Its very simple to lookup singleton demonstrations all over the web so I'll leav
 is the fact that the instance variable inside of the singleton is **static** this is important because it can be easily accessed all throughout 
 your code, and you know you're accessing the correct class because there is only instance of it.
 
-## Delegate
+## 3 - Delegate
 Delegates are actually something very *small* to understand, I say this because I held off learning them because the description was confusing 
 to me and in term I became intimidated, but let me try to explain it so its simple and easy to understand. You know whenever you make a new script 
 and you need to declare all the variables close to the top of the script? well a delegate is a variable that holds a function, so something like:
@@ -121,19 +127,33 @@ PerformCalculation add = adding;
 
 And thats all there is to delegates! Its super easy and its so important in Unity and Gamedev to pass functions to different scripts, expecially when you want to separate front and backend. 
 
-## Event System
+## 4 - Event System
 
 This concept is very interesting. You could produce a whole game without using this, but what it does, *is it makes your code a lot better*. The reason 
 why you *should* use the Event System is because it allows you to compartmentalize logic more efficiently. Your Front-end Code should be separate from the
 backend, with the event system you can write the backend once and have subscribers attached to it. These subscribers do not effect the backend code
 at all, the backend doesn't need to know who these subscribers are or what they're doing. For instance, I can have backend code that sets off an event when
 the user clicks a particular key, lets say "TAB", when the user hits tab, the event is fired, and either no variables or some variables are passed to that event. 
-The subscribers can activate when that event is fired and you can create methods inside the script with the subscribers to perform certain methods
+
+// Firing of event looks like this
+```
+if(Input.GeyKeyDown(KeyCode.Tab))
+{
+	OnClickTab?.Invoke();   <--- Fired Event
+}
+```
+
+<SideNote title="Event Naming Conventions" text="When creating an event, its common practice to start with On[What the Event Reacts to], so in this case OnClickTab, but it could be many other things, OnLevelUp, OnPlayerDead, OnKillEnemy, the list goes on and on." />
+
+I'm not going to go into the code, there's more to event than this little if statement, but before you get into that, we must understand the concept first, Events are very tricky to understand, but once you get you see that it was actually simple, the syntax is whats difficult to get the hang of. 
+
+
+The subscribers then activate when that event is fired and you can create methods inside the script with the subscribers to perform certain methods
 when that event is activated.
 
 
 
-## Monobehavior 
+## 5 - Monobehavior 
 
 Honestly I never though about how important it was to take a dive into Monobehavior until writing this article. Monohevaior is 
 what **most** of your scripts will inherit from. 
@@ -146,7 +166,7 @@ When I looked into the Monobehavior I notice some Methods I had no idea that exi
 OnMouseDrag, OnMouseDown, and OnMouseEnter, these methods can help when dealing with input from the mouse to develop some really intricate
 systems.
 
-## State Machines
+## 6 - State Machines
 
 I've been unexcusably hesitant to try out Unity State Machines. I finally threw in the towel
 and got cracking on it when I was programming the AI for an enemy in my game.
