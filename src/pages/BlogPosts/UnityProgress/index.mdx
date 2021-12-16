@@ -1,14 +1,14 @@
 ---
 path: "/unity-progress"
 date: "28/09/2021"
-title: "Important Unity Concepts"
+title: "6 Important Things I Learned from Half a Year Using Unity "
 category: "GameDev"
 tags: []
 exerpt: "Unity"
 status: "🌱"
 ---
 import model from "./model.jpg"
-import code from "./code.jpg"
+import ice from "./iceberg.png"
 import compare from "./compare.png"
 import SideNote from "../../../components/blogComponents/SideNote/SideNote.tsx";
 import MediumPic from "../../../components/blogComponents/Pictures/MediumPic";
@@ -16,15 +16,17 @@ import MediumPic from "../../../components/blogComponents/Pictures/MediumPic";
 
 
 
-# 6 Important things I learned from Half a year using Unity 
 
 
-<MediumPic img={code} size={900} alt="code" />  
+<MediumPic img={ice} size={500} alt="code" />  
 
-Some concepts I've ran into while learning unity, before this projects I haven't had too much experience with statically typed languages, I used mostly javascript and python, though I 
-had one class in University on Java. It was a tough decision to decide which route to take to build my 2d game. Ultimately I ended up going with Unity probably more due to familiarity 
-and legacy. I had a couple of friends in University who had made little games here and there and all of them used Unity. I was also hesitant with how much could get done with a 
+### My Programming Experience Before Unity
+
+A bit of context to my programming experience, I haven't had too much experience with statically typed languages, I used mostly javascript and python, though I had one class in University on Java. 
+
+It was a tough decision to decide which route to take to build my 2d game. Godot was really rising in popularity, but I ended up going with Unity due to familiarity and the strong user base. I was also hesitant with how much could get done with a 
 dynamic language like Godot, unity being written with C# meant that it was static, and in my understanding, static languages can handle bigger loads of information more efficiently.
+
 Through the 8 months of using unity at the time of writting this article, there are some new concepts I've learned and I've seen becoming important with Unity, and OOP.
 
 
@@ -38,43 +40,26 @@ Through the 8 months of using unity at the time of writting this article, there 
 6. State Machines
 
 
-
-
-as a sidenote I've realized I had to stop using arrays as much in c# because Lists are the superior data structure.
-
 ## 1 - Scriptable Objects
-- Smart data containers that can hold values that also exist outside of play mode
-- Globally accessible and scene independent
-- Act as layers to expose and reuse common functionalities
-- you can edit scriptable objects while in playmode
-- Using Scriptable Object as Enum States
 
 
-<MediumPic img={compare} size={900} alt="difference between scriptable vs mono" />  
 
-so the only new method you get is OnDestoy() and you don't have access to the game loop through functions like
-update and start
+<MediumPic img={compare} size={900} alt="difference between scriptable vs mono" subheading="some methods that inherit from scriptable objects type, compared to monobehavior" />  
+
+
 
 ### Scriptable Objects Vs Monobehaviors
-Scriptable objects can not be attached to components as a gameobject instead they are created a project asset 
-files
+
+As you can see the only new method you get through using Scriptable Objects is OnDestoy() and you don't have access to the game loop through functions like
+update and start. This is an important attribute! 
+
+Scriptable objects can not be attached to components as a gameobject instead they are created as project asset files.
+
+Monobehaviors always live on a game object, so by design their bound to an instance of a gameobject and because of that when you want to access the data for a prefab, each instance will have a copy of the transform and the gameobject which is a waste of space. 
+- moral of the story, if your prefab doesn't need access to gameobject or transform, and you want to save memory, you should use Scriptable Objects instead of Monobehaviors. If you'd like more information on this topic [here](https://www.youtube.com/watch?v=PVOVIxNxxeQ) is a video created by Unity on the topic.
 
 
-
-Monobehaviors are always live on a game object, so by design their bound to an instance of a gameobject
-and because of that when you want to access the data for the prefab, each instance will have a copy of the transform
-and the gameobject which is a waste of space. 
-- moral of the story, if you prefab doesn't need access to gameobject or transform, and you want to save
-memory, you should use Scriptable Objects instead of Monobehaviors
-
-### Uses 
-
-- using a scriptable object as an event relayer that listens to unity's input system so that events can subscribe to it whenever
- the input is detected so that you don't need to keep program different listeners. 
-
-
-
-[youtube video on scriptable objects](https://www.youtube.com/watch?v=PVOVIxNxxeQ)
+<SideNote title="My Use Case" text="In my game, I use scriptable objects to define each page in my skillbook. Its so great this way because that object is used among various scenes, and in the past, when the variables were attached to the script, there were differences in values because it was able to be one value in one scene and another value in another scene. Now I just edit the Scriptable Object and drag it into all the scenes." />
 
 
 
@@ -103,28 +88,28 @@ your code, and you know you're accessing the correct class because there is only
 Delegates are actually something very *small* to understand, I say this because I held off learning them because the description was confusing 
 to me and in term I became intimidated, but let me try to explain it so its simple and easy to understand. You know whenever you make a new script 
 and you need to declare all the variables close to the top of the script? well a delegate is a variable that holds a function, so something like:
-
+```
 public delegate int PerformCalculation(int x, int y);
 
 PerformCalculation add;
-
+```
 so all we did was made a random function that accepts 2 arguments, at this point we havent *defined* what the function/delegate does, all we did 
 was say it needs 2 variables. Then we gave out delegate a variable name, add;
 
 so when you want to use it, you need to assign a function to this delegate:
-
+```
 static bool adding(int number1, int number2)
 {
 	return number1 + number2;
 }
 
 add = adding; 
-
+```
 now our delegate add has the function value adding, we did this in 2 steps, we could have named the delegate and assigned its value in one step 
 by doing this:
-
+```
 PerformCalculation add = adding;
-
+```
 And thats all there is to delegates! Its super easy and its so important in Unity and Gamedev to pass functions to different scripts, expecially when you want to separate front and backend. 
 
 ## 4 - Event System
@@ -193,7 +178,6 @@ For my first use case, I used state machine to control the enemy in my game thro
 2. Follow State - when the enemy detects me and starts following me.
 3. Attack State - after the enemy follows me and is within range to attack.
 4. Idle State - after the enemy gets to the patrol states random position, and it waits in that position for around 4 seconds.
-
 
 
 

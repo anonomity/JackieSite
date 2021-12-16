@@ -5,12 +5,14 @@ type MediumPicProps = {
   img: any;
   alt: string;
   size: number;
+  subheading: string;
 };
 
 export const MediumPic: FunctionComponent<MediumPicProps> = ({
   img,
   alt,
   size,
+  subheading,
 }) => (
   <React.Fragment>
     <img
@@ -23,6 +25,7 @@ export const MediumPic: FunctionComponent<MediumPicProps> = ({
         marginRight: "auto",
       }}
     />
+    <p className={classes.subHeading}>{subheading}</p>
   </React.Fragment>
 );
 

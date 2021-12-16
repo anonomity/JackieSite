@@ -1,7 +1,7 @@
 // Wraps the whole Gatsby element
 import React from "react";
 import { MDXProvider } from "@mdx-js/react";
-
+import CustomCodeBlock from "./src/components/blogComponents/CustomCodeBlock/CustomCodeBlock";
 import Activity from "./src/components/ui/Activity";
 
 // const MyH2 = (props) => <Activity {...props} />;
@@ -39,6 +39,7 @@ const components = {
   img: IMG,
   h2: MyH2,
   h1: MyH1,
+  code: (props) => <CustomCodeBlock {...props} />,
 };
 
 export const wrapRootElement = ({ element }) => {
