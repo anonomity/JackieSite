@@ -1,6 +1,7 @@
 ---
 path: "/unity-progress"
 date: "28/09/2021"
+lastUpdated: "16-12-2016"
 title: "6 Important Things I Learned from Half a Year Using Unity "
 category: "GameDev"
 tags: []
@@ -18,11 +19,12 @@ import MediumPic from "../../../components/blogComponents/Pictures/MediumPic";
 
 
 
-<MediumPic img={ice} size={500} alt="code" />  
+<MediumPic img={ice} size={500} alt="code" subheading="the Game Dev Iceberg"/>  
 
 ### My Programming Experience Before Unity
 
 A bit of context to my programming experience, I haven't had too much experience with statically typed languages, I used mostly javascript and python, though I had one class in University on Java. 
+
 
 It was a tough decision to decide which route to take to build my 2d game. Godot was really rising in popularity, but I ended up going with Unity due to familiarity and the strong user base. I was also hesitant with how much could get done with a 
 dynamic language like Godot, unity being written with C# meant that it was static, and in my understanding, static languages can handle bigger loads of information more efficiently.
@@ -63,25 +65,23 @@ Monobehaviors always live on a game object, so by design their bound to an insta
 
 
 
-## 2 - Singleton
+## 2 - Singleton Design Pattern
 
-now this is a concept that comes when you start diving into OOP deeper. If you're a beginner programmer, now might not be the best time to 
+now this is a concept that comes when you start diving into OOP deeper. If you're a beginner programmer, it might not be the best time to 
 understand this concept, but continue reading to see whats ahead of the horizon. A singleton is a **Design Pattern**. What is a design pattern 
 you may ask? 
 
 <SideNote title="Design Pattern" text="a description or template for how to solve a problem that can be used in many different situations.Think of it 
-this way, if you're programming somehing, anything chances are many other people have built that same thing you're
+this way, if you're programming somehing, chances are many other people have built that same thing you're
 buiding, and many people have faced the same problem as you. Because programmers have to build the same parts so often, there are some parts that 
-have been tested and perfected and they are closest to the best solution on how to solve that problem." />
+have been tested and perfected and they are the best solution to the problem. Like a cookie cutter of a gingerbread man is the best way to make a gingerbread man cookie, a Desgin pattern for solving x problem is the best way to solve x" />
 
 
- This is a design pattern, for our example 
-Singleton, this is the *best* way to implement something that should only have *one* instance.  For instance in my game, there is only *one* 
+ For example, the Singleton design pattern is the *best* way to implement something that should only have *one* instance.  For instance in my game, there is only *one* 
 skillbook. And how the code works is that it only instantiates the class once. The code for a singleton makes it very safe, because if we 
 accidently instantiate two instances and update 1 and then read the other, you can see how this can get very messy. 
 
-Its very simple to lookup singleton demonstrations all over the web so I'll leave it to you, just some important features I want to highlight, 
-is the fact that the instance variable inside of the singleton is **static** this is important because it can be easily accessed all throughout 
+Its very simple to lookup singleton demonstrations all over the web so I'll leave it to you, just some important features I want to highlight is the fact that the instance variable inside of the singleton is **static** this is important because it can be easily accessed all throughout 
 your code, and you know you're accessing the correct class because there is only instance of it.
 
 ## 3 - Delegate
@@ -94,7 +94,7 @@ public delegate int PerformCalculation(int x, int y);
 PerformCalculation add;
 ```
 so all we did was made a random function that accepts 2 arguments, at this point we havent *defined* what the function/delegate does, all we did 
-was say it needs 2 variables. Then we gave out delegate a variable name, add;
+was say it needs 2 variables. Then we gave the delegate a variable name, add.
 
 so when you want to use it, you need to assign a function to this delegate:
 ```
@@ -110,6 +110,12 @@ by doing this:
 ```
 PerformCalculation add = adding;
 ```
+now our add delegate becomed that function that adds 2 numbers, and in the future I can even assign our add delegate to a different function. 
+now if I wanted to use the add delegate its like this
+```
+int value = add(1,2);
+```
+it works the same as a normal function.
 And thats all there is to delegates! Its super easy and its so important in Unity and Gamedev to pass functions to different scripts, expecially when you want to separate front and backend. 
 
 ## 4 - Event System
@@ -130,7 +136,7 @@ if(Input.GeyKeyDown(KeyCode.Tab))
 
 <SideNote title="Event Naming Conventions" text="When creating an event, its common practice to start with On[What the Event Reacts to], so in this case OnClickTab, but it could be many other things, OnLevelUp, OnPlayerDead, OnKillEnemy, the list goes on and on." />
 
-I'm not going to go into the code, there's more to event than this little if statement, but before you get into that, we must understand the concept first, Events are very tricky to understand, but once you get you see that it was actually simple, the syntax is whats difficult to get the hang of. 
+I'm not going to go into the code, there's more to event than this little if statement, but before you get into that, we must understand the concept first, Events are very tricky to understand, but once you get it, you see that it was actually simple, the syntax is whats difficult to get the hang of. 
 
 
 The subscribers then activate when that event is fired and you can create methods inside the script with the subscribers to perform certain methods
@@ -140,16 +146,34 @@ when that event is activated.
 
 ## 5 - Monobehavior 
 
-Honestly I never though about how important it was to take a dive into Monobehavior until writing this article. Monohevaior is 
+Honestly I never thought about how important it was to take a dive into Monobehavior until writing this article. Monohevaior is 
 what **most** of your scripts will inherit from. 
 
-<SideNote title="Inheritance" text="Inheritance is an object oriented programming concept, it's what happens when one script gets 
-retrieved methods / variables  from anothers script, for example lets say we have an Animals scripts and in this script we have the method 
-**breathe**, if I make another script Dog that inherits from Animal, the dog will be able to use the method breathe." />
+<SideNote title="Inheritance" text="Inheritance is an object oriented concept, it's what happens when one script gets methods / variables  from anothers script, for example lets say we have an Animals scripts and in this script we have the method 
+**breathe**, if I make another script Dog that inherits from Animal, the dog will be able to use the method breathe. " />
 
 When I looked into the Monobehavior I notice some Methods I had no idea that existed and could be very useful, for instance, 
 OnMouseDrag, OnMouseDown, and OnMouseEnter, these methods can help when dealing with input from the mouse to develop some really intricate
 systems.
+
+take some time to look at more of the methods that come with Monobehavior [here](https://docs.unity3d.com/ScriptReference/MonoBehaviour.html), it will help you undertstand why its important and the full power your scripts that inherit from Monobehavior have. 
+
+<SideNote title ="Coroutines" text="The MonoBehaviour class allows you to start, stop, and manage Coroutines. Coroutines are so important when you need to delay an action in code, lets say after you eliminate an enemy with you're trusty sword, you want to wait till the death animation plays out to destroy the gameObject, you can fire up a coroutine function to wait around 5 seconds until it destroys that game object." />
+
+### Events 
+Some events that monobehavior has access to are as follows: 
+
+1. Start- called when the GameObject begins to exist (either when the Scene is loaded, or the GameObject is instantiated).
+
+1. Update - called every frame.
+
+1. Fixed Update- called every physics timestep.
+
+1. OnBecameVisible and OnBecameInvisible- called when a GameObject’s renderer enters or leaves a camera's view.
+
+1. OnCollisionEnter nd OnTriggerEnter - called when physics **collisions** or triggers occur.
+
+1. OnDestroy- called when the GameObject is destroyed.
 
 ## 6 - State Machines
 
@@ -157,10 +181,9 @@ I've been unexcusably hesitant to try out Unity State Machines. I finally threw 
 and got cracking on it when I was programming the AI for an enemy in my game.
 
 The first thing I realized was that you create State Machine Scripts differently from normal scripts
-in unity. In order to create State Machine (SM) script, you must open the animator tab, and click on 
-an animation, and in the inspector window click [Add Behavior] once you open up the created script
-you'll realize that the script no longer inherits from MonoBehavior but from StateMachineBehaviour. 
-Another feature is this has a bunch of methods that are commented out. OnStateEnter(), 
+in unity. In order to create State Machine (SM) scripts you must open the animator tab, and click on 
+an animation, then in the inspector window click [Add Behavior] once you open up the created script
+you'll realize that the script no longer inherits from MonoBehavior but from StateMachineBehaviour. There should be some commented out functions:  OnStateEnter(), 
 OnStateUpdate(), OnStateExit(), OnStateMove() and OnStateIK().
 For now the first 3 are the most important and are pretty self explanatory. 
 The first [OneStateEnter] is called once the animation state is entered, the second [OnStateUpdate] is a loop that is 
@@ -178,6 +201,8 @@ For my first use case, I used state machine to control the enemy in my game thro
 2. Follow State - when the enemy detects me and starts following me.
 3. Attack State - after the enemy follows me and is within range to attack.
 4. Idle State - after the enemy gets to the patrol states random position, and it waits in that position for around 4 seconds.
+
+
 
 
 

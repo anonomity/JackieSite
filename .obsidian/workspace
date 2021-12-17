@@ -1,0 +1,111 @@
+{
+  "main": {
+    "id": "76d56fabbf690daf",
+    "type": "split",
+    "children": [
+      {
+        "id": "c00adbc0ffe30518",
+        "type": "leaf",
+        "state": {
+          "type": "markdown",
+          "state": {
+            "file": "README.md",
+            "mode": "source"
+          }
+        }
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "852f25cc913de4c6",
+    "type": "split",
+    "children": [
+      {
+        "id": "33e33e554eff74a1",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "33c2438a8c775dce",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {}
+            }
+          },
+          {
+            "id": "f5fdd8da412598b6",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "e807f954a5effff9",
+    "type": "split",
+    "children": [
+      {
+        "id": "a71d8824fe276283",
+        "type": "tabs",
+        "dimension": 65.24105754276827,
+        "children": [
+          {
+            "id": "c78e6383af624291",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "README.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          }
+        ]
+      },
+      {
+        "id": "f79af143ecb5802a",
+        "type": "tabs",
+        "dimension": 34.758942457231726,
+        "children": [
+          {
+            "id": "752d440d6e16c9a6",
+            "type": "leaf",
+            "state": {
+              "type": "calendar",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "active": "c00adbc0ffe30518",
+  "lastOpenFiles": [
+    "README.md",
+    "src/pages/BlogPosts/UnityProgress/index.mdx",
+    "src/pages/BlogPosts/UnityProgress/iceberg.png",
+    "node_modules/js-base64/README.md"
+  ]
+}
