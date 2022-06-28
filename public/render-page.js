@@ -1,12 +1,12 @@
 (function webpackUniversalModuleDefinition(root, factory) {
 	if(typeof exports === 'object' && typeof module === 'object')
-		module.exports = factory(require("C:\\Users\\Jackie\\Programs\\WebDev\\JackieSite2\\JackieSite\\node_modules\\@reach\\router\\index.js"), require("C:\\Users\\Jackie\\Programs\\WebDev\\JackieSite2\\JackieSite\\node_modules\\common-tags\\lib\\index.js"), require("C:\\Users\\Jackie\\Programs\\WebDev\\JackieSite2\\JackieSite\\node_modules\\lodash\\merge.js"), require("path"), require("react"), require("react-dom/server"), require("react-helmet"));
+		module.exports = factory(require("/Users/jlaur/dev/JackieSite/node_modules/@reach/router/index.js"), require("/Users/jlaur/dev/JackieSite/node_modules/common-tags/lib/index.js"), require("/Users/jlaur/dev/JackieSite/node_modules/lodash/merge.js"), require("path"), require("react"), require("react-dom/server"), require("react-helmet"));
 	else if(typeof define === 'function' && define.amd)
-		define("lib", ["C:\\Users\\Jackie\\Programs\\WebDev\\JackieSite2\\JackieSite\\node_modules\\@reach\\router\\index.js", "C:\\Users\\Jackie\\Programs\\WebDev\\JackieSite2\\JackieSite\\node_modules\\common-tags\\lib\\index.js", "C:\\Users\\Jackie\\Programs\\WebDev\\JackieSite2\\JackieSite\\node_modules\\lodash\\merge.js", "path", "react", "react-dom/server", "react-helmet"], factory);
+		define("lib", ["/Users/jlaur/dev/JackieSite/node_modules/@reach/router/index.js", "/Users/jlaur/dev/JackieSite/node_modules/common-tags/lib/index.js", "/Users/jlaur/dev/JackieSite/node_modules/lodash/merge.js", "path", "react", "react-dom/server", "react-helmet"], factory);
 	else if(typeof exports === 'object')
-		exports["lib"] = factory(require("C:\\Users\\Jackie\\Programs\\WebDev\\JackieSite2\\JackieSite\\node_modules\\@reach\\router\\index.js"), require("C:\\Users\\Jackie\\Programs\\WebDev\\JackieSite2\\JackieSite\\node_modules\\common-tags\\lib\\index.js"), require("C:\\Users\\Jackie\\Programs\\WebDev\\JackieSite2\\JackieSite\\node_modules\\lodash\\merge.js"), require("path"), require("react"), require("react-dom/server"), require("react-helmet"));
+		exports["lib"] = factory(require("/Users/jlaur/dev/JackieSite/node_modules/@reach/router/index.js"), require("/Users/jlaur/dev/JackieSite/node_modules/common-tags/lib/index.js"), require("/Users/jlaur/dev/JackieSite/node_modules/lodash/merge.js"), require("path"), require("react"), require("react-dom/server"), require("react-helmet"));
 	else
-		root["lib"] = factory(root["C:\\Users\\Jackie\\Programs\\WebDev\\JackieSite2\\JackieSite\\node_modules\\@reach\\router\\index.js"], root["C:\\Users\\Jackie\\Programs\\WebDev\\JackieSite2\\JackieSite\\node_modules\\common-tags\\lib\\index.js"], root["C:\\Users\\Jackie\\Programs\\WebDev\\JackieSite2\\JackieSite\\node_modules\\lodash\\merge.js"], root["path"], root["react"], root["react-dom/server"], root["react-helmet"]);
+		root["lib"] = factory(root["/Users/jlaur/dev/JackieSite/node_modules/@reach/router/index.js"], root["/Users/jlaur/dev/JackieSite/node_modules/common-tags/lib/index.js"], root["/Users/jlaur/dev/JackieSite/node_modules/lodash/merge.js"], root["path"], root["react"], root["react-dom/server"], root["react-helmet"]);
 })(this, function(__WEBPACK_EXTERNAL_MODULE__reach_router__, __WEBPACK_EXTERNAL_MODULE_common_tags__, __WEBPACK_EXTERNAL_MODULE_lodash_merge__, __WEBPACK_EXTERNAL_MODULE_path__, __WEBPACK_EXTERNAL_MODULE_react__, __WEBPACK_EXTERNAL_MODULE_react_dom_server__, __WEBPACK_EXTERNAL_MODULE_react_helmet__) {
 return /******/ (function(modules) { // webpackBootstrap
 /******/ 	// The module cache
@@ -124,7 +124,7 @@ var plugins = [{
     "remarkPlugins": [],
     "rehypePlugins": [],
     "mediaTypes": ["text/markdown", "text/x-markdown"],
-    "root": "C:\\Users\\Jackie\\Programs\\WebDev\\JackieSite2\\JackieSite"
+    "root": "/Users/jlaur/dev/JackieSite"
   }
 }, {
   plugin: __webpack_require__(/*! ./node_modules/gatsby-plugin-manifest/gatsby-ssr */ "./node_modules/gatsby-plugin-manifest/gatsby-ssr.js"),
@@ -409,9 +409,9 @@ exports.wrapRootElement = true;
 
 /***/ }),
 
-/***/ "./.cache/caches/gatsby-plugin-mdx/mdx-scopes-dir/9d67ee39cddc250256d5ce94436c5515.js":
+/***/ "./.cache/caches/gatsby-plugin-mdx/mdx-scopes-dir/2184f0d8ba843d07c4ea6937f8466620.js":
 /*!********************************************************************************************!*\
-  !*** ./.cache/caches/gatsby-plugin-mdx/mdx-scopes-dir/9d67ee39cddc250256d5ce94436c5515.js ***!
+  !*** ./.cache/caches/gatsby-plugin-mdx/mdx-scopes-dir/2184f0d8ba843d07c4ea6937f8466620.js ***!
   \********************************************************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
@@ -445,9 +445,9 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./.cache/caches/gatsby-plugin-mdx/mdx-scopes-dir/d927450fa76c7e38d4b1d12345eed1cd.js":
+/***/ "./.cache/caches/gatsby-plugin-mdx/mdx-scopes-dir/9d117502ae21715196f9cc1e037ca965.js":
 /*!********************************************************************************************!*\
-  !*** ./.cache/caches/gatsby-plugin-mdx/mdx-scopes-dir/d927450fa76c7e38d4b1d12345eed1cd.js ***!
+  !*** ./.cache/caches/gatsby-plugin-mdx/mdx-scopes-dir/9d117502ae21715196f9cc1e037ca965.js ***!
   \********************************************************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
@@ -3270,9 +3270,9 @@ module.exports = {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-var scope_0 = __webpack_require__(/*! ./.cache/caches/gatsby-plugin-mdx/mdx-scopes-dir/9d67ee39cddc250256d5ce94436c5515.js */ "./.cache/caches/gatsby-plugin-mdx/mdx-scopes-dir/9d67ee39cddc250256d5ce94436c5515.js").default;
+var scope_0 = __webpack_require__(/*! ./.cache/caches/gatsby-plugin-mdx/mdx-scopes-dir/2184f0d8ba843d07c4ea6937f8466620.js */ "./.cache/caches/gatsby-plugin-mdx/mdx-scopes-dir/2184f0d8ba843d07c4ea6937f8466620.js").default;
 
-var scope_1 = __webpack_require__(/*! ./.cache/caches/gatsby-plugin-mdx/mdx-scopes-dir/d927450fa76c7e38d4b1d12345eed1cd.js */ "./.cache/caches/gatsby-plugin-mdx/mdx-scopes-dir/d927450fa76c7e38d4b1d12345eed1cd.js").default;
+var scope_1 = __webpack_require__(/*! ./.cache/caches/gatsby-plugin-mdx/mdx-scopes-dir/9d117502ae21715196f9cc1e037ca965.js */ "./.cache/caches/gatsby-plugin-mdx/mdx-scopes-dir/9d117502ae21715196f9cc1e037ca965.js").default;
 
 var scope_2 = __webpack_require__(/*! ./.cache/caches/gatsby-plugin-mdx/mdx-scopes-dir/e92f8988d65cf25c087d226e6c0ef06f.js */ "./.cache/caches/gatsby-plugin-mdx/mdx-scopes-dir/e92f8988d65cf25c087d226e6c0ef06f.js").default;
 
@@ -31426,8 +31426,8 @@ if (false) {} else {
 /***/ (function(module, exports) {
 
 module.exports = {
-	"text": "Code-module--text--3Omil",
-	"background": "Code-module--background--35qmH"
+	"text": "Code-module--text--o0Q3q",
+	"background": "Code-module--background--ECbpH"
 };
 
 /***/ }),
@@ -31504,10 +31504,10 @@ const MediumPic = ({
 /***/ (function(module, exports) {
 
 module.exports = {
-	"SideNote": "SideNote-module--SideNote--XGRyM",
-	"hr": "SideNote-module--hr--133eJ",
-	"text": "SideNote-module--text--k32Pk",
-	"title": "SideNote-module--title--1aIRt"
+	"SideNote": "SideNote-module--SideNote--38dte",
+	"hr": "SideNote-module--hr--3Fz9A",
+	"text": "SideNote-module--text--4yTWN",
+	"title": "SideNote-module--title--2RM0m"
 };
 
 /***/ }),
@@ -31556,9 +31556,9 @@ const SideNote = ({
 /***/ (function(module, exports) {
 
 module.exports = {
-	"image": "Tallpic-module--image--3X3D8",
-	"mediumPic": "Tallpic-module--mediumPic--3hEsr",
-	"subHeading": "Tallpic-module--subHeading--1h-Vw"
+	"image": "Tallpic-module--image--2zsra",
+	"mediumPic": "Tallpic-module--mediumPic--13qTv",
+	"subHeading": "Tallpic-module--subHeading--3V2JI"
 };
 
 /***/ }),
@@ -31658,9 +31658,9 @@ module.exports = __webpack_require__.p + "static/model-362ebb85dd20f6bc72ca13c48
 /***/ }),
 
 /***/ "@reach/router":
-/*!***********************************************************************************************************************!*\
-  !*** external "C:\\Users\\Jackie\\Programs\\WebDev\\JackieSite2\\JackieSite\\node_modules\\@reach\\router\\index.js" ***!
-  \***********************************************************************************************************************/
+/*!**********************************************************************************!*\
+  !*** external "/Users/jlaur/dev/JackieSite/node_modules/@reach/router/index.js" ***!
+  \**********************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
@@ -31669,9 +31669,9 @@ module.exports = __WEBPACK_EXTERNAL_MODULE__reach_router__;
 /***/ }),
 
 /***/ "common-tags":
-/*!*************************************************************************************************************************!*\
-  !*** external "C:\\Users\\Jackie\\Programs\\WebDev\\JackieSite2\\JackieSite\\node_modules\\common-tags\\lib\\index.js" ***!
-  \*************************************************************************************************************************/
+/*!************************************************************************************!*\
+  !*** external "/Users/jlaur/dev/JackieSite/node_modules/common-tags/lib/index.js" ***!
+  \************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
@@ -31680,9 +31680,9 @@ module.exports = __WEBPACK_EXTERNAL_MODULE_common_tags__;
 /***/ }),
 
 /***/ "lodash/merge":
-/*!***************************************************************************************************************!*\
-  !*** external "C:\\Users\\Jackie\\Programs\\WebDev\\JackieSite2\\JackieSite\\node_modules\\lodash\\merge.js" ***!
-  \***************************************************************************************************************/
+/*!***************************************************************************!*\
+  !*** external "/Users/jlaur/dev/JackieSite/node_modules/lodash/merge.js" ***!
+  \***************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 

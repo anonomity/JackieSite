@@ -8,9 +8,9 @@ tags: []
 exerpt: "Unity"
 status: "🌿"
 ---
-import model from "./model.jpg"
-import ice from "./iceberg.png"
-import compare from "./compare.png"
+import model from "./model.jpg";
+import ice from "./iceberg.png";
+import compare from "./compare.png";
 import SideNote from "../../../components/blogComponents/SideNote/SideNote.tsx";
 import MediumPic from "../../../components/blogComponents/Pictures/MediumPic";
 
@@ -145,7 +145,9 @@ And thats all there is to delegates! Its super easy and its so important in Unit
 This concept is very interesting. You could produce a whole game without using this, but what it does, *is it makes your code a lot better*. The reason 
 why you *should* use the Event System is because it allows you to compartmentalize logic more efficiently. Your Front-end Code should be separate from the
 backend, with the event system you can write the backend once and have subscribers attached to it. These subscribers do not effect the backend code
-at all, the backend doesn't need to know who these subscribers are or what they're doing. For instance, I can have backend code that sets off an event when
+at all, the backend doesn't need to know who these subscribers are or what they're doing.
+
+For instance, I can have backend code that sets off an event when
 the user clicks a particular key, lets say "TAB", when the user hits tab, the event is fired, and either no variables or some variables are passed to that event. 
 
 // Firing of event looks like this
