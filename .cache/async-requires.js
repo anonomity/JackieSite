@@ -7,6 +7,7 @@ exports.components = {
   "component---src-pages-blog-posts-how-i-made-this-index-mdx": () => import("./../../../src/pages/BlogPosts/HowIMadeThis/index.mdx" /* webpackChunkName: "component---src-pages-blog-posts-how-i-made-this-index-mdx" */),
   "component---src-pages-blog-posts-hypatia-6-index-mdx": () => import("./../../../src/pages/BlogPosts/Hypatia6/index.mdx" /* webpackChunkName: "component---src-pages-blog-posts-hypatia-6-index-mdx" */),
   "component---src-pages-blog-posts-offline-application-index-mdx": () => import("./../../../src/pages/BlogPosts/OfflineApplication/index.mdx" /* webpackChunkName: "component---src-pages-blog-posts-offline-application-index-mdx" */),
+  "component---src-pages-blog-posts-privacy-policy-index-mdx": () => import("./../../../src/pages/BlogPosts/PrivacyPolicy/index.mdx" /* webpackChunkName: "component---src-pages-blog-posts-privacy-policy-index-mdx" */),
   "component---src-pages-blog-posts-random-walk-index-mdx": () => import("./../../../src/pages/BlogPosts/RandomWalk/index.mdx" /* webpackChunkName: "component---src-pages-blog-posts-random-walk-index-mdx" */),
   "component---src-pages-blog-posts-unity-progress-index-mdx": () => import("./../../../src/pages/BlogPosts/UnityProgress/index.mdx" /* webpackChunkName: "component---src-pages-blog-posts-unity-progress-index-mdx" */),
   "component---src-pages-blog-tsx": () => import("./../../../src/pages/blog.tsx" /* webpackChunkName: "component---src-pages-blog-tsx" */),

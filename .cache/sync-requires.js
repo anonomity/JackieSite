@@ -10,6 +10,7 @@ exports.components = {
   "component---src-pages-blog-posts-how-i-made-this-index-mdx": hot(preferDefault(require("C:\\Users\\Jackie\\Programs\\WebDev\\JackieSite2\\JackieSite\\src\\pages\\BlogPosts\\HowIMadeThis\\index.mdx"))),
   "component---src-pages-blog-posts-hypatia-6-index-mdx": hot(preferDefault(require("C:\\Users\\Jackie\\Programs\\WebDev\\JackieSite2\\JackieSite\\src\\pages\\BlogPosts\\Hypatia6\\index.mdx"))),
   "component---src-pages-blog-posts-offline-application-index-mdx": hot(preferDefault(require("C:\\Users\\Jackie\\Programs\\WebDev\\JackieSite2\\JackieSite\\src\\pages\\BlogPosts\\OfflineApplication\\index.mdx"))),
+  "component---src-pages-blog-posts-privacy-policy-index-mdx": hot(preferDefault(require("C:\\Users\\Jackie\\Programs\\WebDev\\JackieSite2\\JackieSite\\src\\pages\\BlogPosts\\PrivacyPolicy\\index.mdx"))),
   "component---src-pages-blog-posts-random-walk-index-mdx": hot(preferDefault(require("C:\\Users\\Jackie\\Programs\\WebDev\\JackieSite2\\JackieSite\\src\\pages\\BlogPosts\\RandomWalk\\index.mdx"))),
   "component---src-pages-blog-posts-unity-progress-index-mdx": hot(preferDefault(require("C:\\Users\\Jackie\\Programs\\WebDev\\JackieSite2\\JackieSite\\src\\pages\\BlogPosts\\UnityProgress\\index.mdx"))),
   "component---src-pages-blog-tsx": hot(preferDefault(require("C:\\Users\\Jackie\\Programs\\WebDev\\JackieSite2\\JackieSite\\src\\pages\\blog.tsx"))),
