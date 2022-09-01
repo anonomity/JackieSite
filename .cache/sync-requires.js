@@ -7,6 +7,7 @@ const preferDefault = m => (m && m.default) || m
 exports.components = {
   "component---cache-dev-404-page-js": hot(preferDefault(require("C:\\Users\\Jackie\\Programs\\WebDev\\JackieSite2\\JackieSite\\.cache\\dev-404-page.js"))),
   "component---src-pages-aboutme-tsx": hot(preferDefault(require("C:\\Users\\Jackie\\Programs\\WebDev\\JackieSite2\\JackieSite\\src\\pages\\aboutme.tsx"))),
+  "component---src-pages-blog-posts-ep-1-index-mdx": hot(preferDefault(require("C:\\Users\\Jackie\\Programs\\WebDev\\JackieSite2\\JackieSite\\src\\pages\\BlogPosts\\Ep1\\index.mdx"))),
   "component---src-pages-blog-posts-how-i-made-this-index-mdx": hot(preferDefault(require("C:\\Users\\Jackie\\Programs\\WebDev\\JackieSite2\\JackieSite\\src\\pages\\BlogPosts\\HowIMadeThis\\index.mdx"))),
   "component---src-pages-blog-posts-hypatia-6-index-mdx": hot(preferDefault(require("C:\\Users\\Jackie\\Programs\\WebDev\\JackieSite2\\JackieSite\\src\\pages\\BlogPosts\\Hypatia6\\index.mdx"))),
   "component---src-pages-blog-posts-offline-application-index-mdx": hot(preferDefault(require("C:\\Users\\Jackie\\Programs\\WebDev\\JackieSite2\\JackieSite\\src\\pages\\BlogPosts\\OfflineApplication\\index.mdx"))),

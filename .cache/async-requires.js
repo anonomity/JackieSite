@@ -4,6 +4,7 @@ const preferDefault = m => (m && m.default) || m
 exports.components = {
   "component---cache-dev-404-page-js": () => import("./../../dev-404-page.js" /* webpackChunkName: "component---cache-dev-404-page-js" */),
   "component---src-pages-aboutme-tsx": () => import("./../../../src/pages/aboutme.tsx" /* webpackChunkName: "component---src-pages-aboutme-tsx" */),
+  "component---src-pages-blog-posts-ep-1-index-mdx": () => import("./../../../src/pages/BlogPosts/Ep1/index.mdx" /* webpackChunkName: "component---src-pages-blog-posts-ep-1-index-mdx" */),
   "component---src-pages-blog-posts-how-i-made-this-index-mdx": () => import("./../../../src/pages/BlogPosts/HowIMadeThis/index.mdx" /* webpackChunkName: "component---src-pages-blog-posts-how-i-made-this-index-mdx" */),
   "component---src-pages-blog-posts-hypatia-6-index-mdx": () => import("./../../../src/pages/BlogPosts/Hypatia6/index.mdx" /* webpackChunkName: "component---src-pages-blog-posts-hypatia-6-index-mdx" */),
   "component---src-pages-blog-posts-offline-application-index-mdx": () => import("./../../../src/pages/BlogPosts/OfflineApplication/index.mdx" /* webpackChunkName: "component---src-pages-blog-posts-offline-application-index-mdx" */),
