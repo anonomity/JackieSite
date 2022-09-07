@@ -7,10 +7,10 @@ import ts from "../images/techStack/ts.png";
 import py from "../images/techStack/python.jpeg";
 import node from "../images/techStack/nodejs.jpg";
 import react from "../images/techStack/react.png";
-import hypatia1 from "../images/day16.png";
-import hypatia2 from "../images/cave.png";
-import hypatia3 from "../images/dialogue.png";
-import hypatia4 from "../images/shop.png";
+import hypatia1 from "../images/img1.jpg";
+import hypatia2 from "../images/img2.jpg";
+import hypatia3 from "../images/img3.jpg";
+import hypatia4 from "../images/im4.jpg";
 
 function AboutMe() {
   return (
@@ -46,8 +46,7 @@ function AboutMe() {
           I've been teaching kids programming since late 2018. */}
           <h2 className={classes.centerText}>Hypatia</h2>
           Hypatia is a game I've been working on since May 2021. I'm developing
-          Hypatia using <TechSticker title={"Unity"} />
-          and <TechSticker title={"C#"} />. I'm also doing the pixel art using{" "}
+          Hypatia using <TechSticker title={"Godot"} />. I'm also doing the pixel art using{" "}
           <TechSticker title={"Aseprite"} />. Hypatia is a 2d action RPG set in
           the time of Ancient Greece. There is Greek Mythology incorporated in
           the game but the time is set to around 300 BC, in this game you will
