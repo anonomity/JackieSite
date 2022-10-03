@@ -1,0 +1,166 @@
+---
+path: "/chapter-1"
+date: "03-10-2022"
+title: "Chapter 1 : Game Types and Tools"
+category: "GameDev"
+tags: ["Godot", "book", "Game Development"]
+exerpt: "Learn Godot"
+status: "🌱"
+---
+import sixteen from "./sixteen.png"
+import fake from "./fake.png"
+import godotold from "./godot2004.png"
+import real from "./real.png"
+import godotnewer from "./godot2009.png"
+import MediumPic from "../../../components/blogComponents/Pictures/MediumPic";
+
+**Alrighty so yer interested in making a game eh? Well you’ve come to the right place. Before we can get started, let's stop at the game part shall we. If you’re interested in making games, I’m sure you’re a gamer. There are so many games out there so let’s narrow it down a bit. Most indie games are in 2d, you can find some in 3d but it's much less common, why? Because adding another dimension adds a lot of problems. So since we're starting out, let’s take it easy. 
+
+  
+## Game Types
+
+Ok now that we’ve narrowed it down to just 2d games lets talk about the different types of 2d games. 
+1. Platformers
+2. Top-Down
+3. Isometric
+
+There are Platformers: 
+
+<MediumPic img={"https://lh3.googleusercontent.com/QFyF68WZ3gB8ocRQdEUPvCqvySAzTWgY__DaZA848CjNkEPjaKcF7BjV5-v_vVXqkyNfIzuHMY3Sqdwbny_PHSBq1iabijr0cL29liF6NC7I6HrqQkFGRi4w8Ct35gqc5JM-xZTd_cqNJR6wXx7ey0wV_VcqFfcK0zFtiJjWIZXuWqvDj2ZFtrSAmw"} size={500} alt="code" subheading="Celeste 2018 "/>  
+<MediumPic img={"https://lh6.googleusercontent.com/LpSxSAOMhDXcBnz3a2tSeLeqif2EYzL4CenNIxatnIGdMM_O8J2S70WvIJCnrfSx86VDOfOQ-7x3VtRgtK9XMxXbOk9dIHqwIbn1u86XLLIwQCor6z2PykXajox130kPmsgtKkRc1AWusl3J3lFbnzKBTEdo9Ae2fqcpwx8g2xRDssi-G6LYxivTfg"} size={500} alt="code" subheading="Super Mario Bros "/>  
+<MediumPic img={"https://lh6.googleusercontent.com/VEc3tJYnerrvkAZ9tPSyF1D_HKfyShWN97bbONf279GQImwW6_A49jjrf0kWzMUKNP9vHPC3XQc8jLI1pz6XRs0SpIzfYawsOAqE1tUPwswyOt-9bTersaACH_cJJy8dsV8KErBQHWqc5AkRFJ8kG5GLjqBlBKnr-YoD7VFyuiPiXirgIDt4M54ROA"} size={500} alt="code" subheading="Hollow Knight "/>  
+
+Platformers in my opinion are the easiest to make, because it's just about 2 directions and jump and you only need to draw art once and then flip it. Comparing it to top down where you can flip for left and right but you gotta draw up and down separately. Also the aspect for top down can get confusing and I want this tutorial to be as simple as possible and I don’t want you to already feel overwhelmed with the art portion of the project. 
+
+Ok the next type of 2d game is top down, so games like 
+
+<MediumPic img={"https://lh3.googleusercontent.com/-gTvRcv1aCudh0V_DOzh-XfXnlCDrLYDuC1wu2PzosJKoiAP555NV4T4_IJ_j_8xO6HiEHG1a4WDIKtMMA64VvALShSr08Yissx6Z9wdeCBd9Aof5XpOngvTL9fLjTVD72pQginxUG3Jr5KQVhU0AIf5EeEQ4wxnwKlUwFXJELWwrSAvptDqGoVkGA"} size={500} alt="code" subheading="Stardew Valley "/>  
+
+<MediumPic img={"https://lh4.googleusercontent.com/dGyEgSnWT1XamjwsBYHQMKD7vfHnCQIXpqhzeqk-N9JelSX97MaPPui6WipqJT4tByOOWRQQajpJw8oiJJvxdw7m4bE6ccjiMh9nCRBe05B3eIAnG5qb_rQKCehquIQchdVsr4TVypUz6nlISY7uV0svR9rhh8stfWgjnHQIwlRYSqZ8GkLfE4v8gg"} size={500} alt="code" subheading="Pokemon "/>  
+
+
+  
+
+In this art style you don’t really see the sky, the camera is looking down at the ground. This is really good for adventure games because it gives you an expansive feeling of different directions and places to explore, something thats hard to do with platformers. 
+Like I said these are a bit more complicated when it pertains to art because you can have up to 8 directions of movement and thats a LOT of drawing. The last thing I want is to overwhelm you with the art, especially if art ain’t ya thang. We will do art, but it wont be overwhelming, promise :)
+
+Ok so the last perspective were gonna look at is isometric so games like
+
+<MediumPic img={"https://lh6.googleusercontent.com/jm4C4S3EFNP-Z5Jv58Y3cll_Dqntu7sLoW4LnhCAkCzlm6ne0g6zpPyYPR0fe4E7UzTj89cW0TodVat7jnSnsmi9Kv1qAhfarElnBO6hCT5T6sEKMJFlz9SZNCCcda7WGhk5gsjlB5gJEBKXEtDdEjiKMHq_XDsg2hPvE6Zmb5O5kUiVO7ihIGgqMg"} size={500} alt="code" subheading="Unity Isometric Starter Kit"/>  
+<MediumPic img={"https://img.chip.com.tr/rcman/Cw1600h900q95gm/images/content/2021/09/06/2021090612552033112.jpg"} size={500} alt="code" subheading="Hades "/>  
+
+
+
+
+So if you looked at top down and isometric super quickly you might not know the difference. If you think about drawing a cube in top down, you would only see the front of the cube and the top, if you drew it in isometric, you would see front, 1 side, and top, so it adds an extra face and you’re looking at the map at more of side angle. I’ve yet to develop in this art style so I don’t have much to say on it, other than it looks dope and its a little more complicated than top down.
+
+Great now that we’ve established the different art styles of 2d games I want to say a little bit more on why were doing platformers. Games are about having fun and thinking about how to make the game fun can be overwhelming. The good thing about platformers is they are fun with very little work, you jump from platform to platform and try not to fall, its so simple to implement and so effective. In minecraft, parkour is very fun mode for people to play and watch, and there are only 2 goals in this mode, try to finish the course and don’t fall. 
+
+Of course there are lots more you can add to platformers that make them fun like adding enemies, adding different items you can collect, combat, and much much more, but the good thing is by nature platformers are fun. The downside to this fact is that the market is oversaturated with platformers, the easier something is, the more people are gonna do that thing, and the more competition. But since this is probably your first game, it doesn’t matter much, you have to start somewhere…
+
+## Pixel art
+
+So the art form we are using to make our game is pixel art. Pixel art is very much attributed to retro style games because back in those times, there were many restrictions on the computer, there were no 4k monitors and even colors had to be restricted, the more colors the more memory and that is not something the early computers have. When we make our pixel art we will follow these guidelines of lowering the size and restricting colors but not to the extent as was necessary back in the days, we do it now to maintain consistency. 
+
+### Game Theme
+
+Here is where we need to think about what theme are game is going to take on. This is where we need to brainstorm. Do you want a bright bubbly family friendly game? If so you can maybe draw cute characters with big eyes and bright colors. Do you want to make a jump scare horror game? If thats the case, dark colors with deep sounds and a big hostile environment may be the route to take. Its important to take some time and write a bullet point of the elements you want in your game
+
+- cute
+- bight colors
+- cartoon style
+- mushroom main character
+- environment to be alive
+- ages 4 +
+
+### Color
+
+Ok so first things first, we must find a color palette, this is a very important step because the colors we choose depends on what type of game we want to make. Do you want your game to be happy, exciting and all around jolly? Well if you you should choose a palette with highly saturated colors. Or are you more into dark scary games? If thats the case then that should reflect on the palette you’re choosing. Lospec is a fantastic website used for choosing color palettes, we’ll go over the process of exporting the palette to aseprite later, for now, think about what you want your game to look like.
+
+<MediumPic img={"https://lh6.googleusercontent.com/0xotfbQlnrakVlKLeW1RQLY3YLQw87Az6hQhsFeUVwKK5QqHEJl8mi_xuucB_ajLFtxG0UdUdckU9wMO1Ff-SR7iTIt7citlR-fSwkAGkTlba8dJD9jLLD3z-HuLoODK47wtftYxd9UQAjU4FPMB1Dau-VbYiccppKj1zgvZ9yvUGDu40jI0__0tVg"} size={500} alt="code" subheading="Lospec - website for finding color palettes "/>  
+
+
+### Size matters…
+
+So since were doing pixel art we need to be very conscious about what size our sprites will take on. What is a sprite?
+
+Sprite: assets for our game, sprite can be the character, or an item in the game. It will be the building blocks for the art in our game. 
+
+The first thing were going to make for our game is the tilemap, the tilemap will be the platforms that our characters will stand on, and this is the first important decision we will make in the game, the SIZE of the tilemap. 
+
+You can decide for yourself what size you want, but if you want to follow along the tutorial exactly we are going to use 16 x 16. When decided between sizes its normally either 
+
+16 x 16 
+
+32 x 32 
+
+64 x 64
+
+The higher the number the more work / detail you need to put in. Think about it, 64 is 4 times the canvas compared to 16! If you have more room to draw, you can put a lot more detail into it. So if you want to make your game look hyper realistic than by all means go for 64, but remember, if you make the tiles hyper realistic, you need to make EVERYTHING the same, and thats a lot of work. 
+
+What does the 16 represent what I say 16 x 16? It represents 1 pixel, a pixel is 1 little tiny inny winny square, its the smallest unit the screen can draw. Its hard to imagine now because our screen have hundrends and sometimes thousands of pixels across, but back in the day that number was in the double digits. We've deviated far from that today because even 1 pixel is more than 1 on our high res computer screens, but in pixel art it represents 1 color on 1 square. So if the tilemap is 16 x 16 its 16 pixels across, 16 times.
+Here is a 16 x 16 square using different colors, its so small you can barely see it, thats because pixels are very small lol.
+
+
+
+
+<MediumPic img={sixteen} size={16} alt="code" subheading="16 x 16"/>  
+
+Lets make it bigger, shall we? I will multiply the legnth and width by 4
+
+<MediumPic img={fake} size={64} alt="code" subheading="64 x 64"/>  
+
+
+This is 64 x 64, its now a bit bigger, but ITS A FAKE! because in this image you might say I CAN SEE THE PIXELS! But thats not the full truth because each square that you see with a solid color is 16 pixels. Let me fix it by making each square one color.
+
+
+
+<MediumPic img={real} size={64} alt="code" subheading="64 x 64"/>  
+
+haha and now its getting back to the point where seeing each pixel is difficult. I hope this illustrates the point that pixels are small, and 64 x 64 adds a lot more pixels to work with than than 16 x 16.
+ 
+So cool now lets get to the fun part, its time to get to the pixel art software ASEPRITE. So if you don’t want to buy it, which I really think you should because this tool will make you’re life 1 million times easier than you don’t have to, there is a way that you can build it from source and this is 100% legal so you don’t have to worry. But if you’re broke and lazy you can always use a website called piskel which is an online application that allows you to do pixel art, but if you choose this route, you’re on your own, I’ll be giving shortcuts on aseprite. But if you use piskel its ok, that's how I started off and won't change things too much. 
+
+
+## Godot Game Engine
+So when making an indie game of course you need to decide what the game is going to be about, how you want the art style to look like, when and where the game takes place, yes these are very important decisions, but one of the most important decisions, is which game engine are you going to use?
+
+
+So there are 2 different routes you can go through when deciding what game engine to use, you can
+
+- build your own
+- use a prebuilt engine
+
+This book is aimed toward beginingers making their first game so I will emit the first option. So there are actually quite a few options to choose from, heres a brief list of some of them. 
+
+1. Unity
+2. Unreal
+3. Godot
+4. Game Maker
+
+many many more
+
+So if this was a popularity contest Godot definitely wouldn't win, godot is a relatively new engine but it has many benefits that make it the perfect option. I'm not going to sit here and compare the engines, but I will tell you why Godot is awesome. 
+
+
+### About Godot
+Godot was released on 14 January 2014, the original authors were Juan Linietsky and Ariel Manzur . It's a completely free open source engine, a fact that separates it from many of the game engine out there.
+
+<MediumPic img={"https://pbs.twimg.com/profile_images/687707525827964929/ZfJ5WBtG_400x400.jpg"} size={500} alt="code" subheading="Juan Linietsky"/>  
+
+
+
+<MediumPic img={"https://miro.medium.com/max/320/0*DjRRGLG2hLUJ8Zrh.jpg"} size={500} alt="code" subheading="Ariel Manzur "/>  
+
+
+Godot may have been released in 2014, but the foundations have been programmed and polished since 2001. It started off as a mix of different tools that Juan was building for companies and for himself. It wasn't until 2008/2009 that these tools were coming together in a cohesive way that was starting to look like a game engine. 
+
+<MediumPic img={godotold} size={500} alt="code" subheading="old godot "/>  
+
+<MediumPic img={godotnewer} size={500} alt="code" subheading="new godot"/>  
+
+It was very important for Juan and Ariel to release the source to the engine because at the time there were not really free engines. Since then, thousands of people have contributed to the platform. It is truely a community driven engine, unlike other engines who need to appeal to investors in order to survive. 
+
+So the good catch with godot? You don't owe them a penny for the games you make using the godot game enigne. 
+
+
