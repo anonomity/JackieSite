@@ -8,7 +8,7 @@
     "@types/node": "^12.12.58",
     "@types/styled-components": "^5.1.2",
     "false": "^0.0.4",
-    "gatsby": "^2.24.57",
+    "gatsby": "^5.4.0",
     "gatsby-plugin-image": "^1.0.0",
     "gatsby-plugin-manifest": "^4.16.0",
     "gatsby-plugin-mdx": "^1.2.39",
