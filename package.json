@@ -20,7 +20,7 @@
     "gatsby-transformer-sharp": "^4.16.0",
     "gatsby-transformer-sqip": "^4.16.1",
     "react": "16.13.1",
-    "react-code-blocks": "^0.0.9-0",
+    "react-code-blocks": "^0.1.0",
     "react-dom": "16.13.1",
     "react-helmet": "^6.1.0",
     "styled-components": "^5.1.1",
